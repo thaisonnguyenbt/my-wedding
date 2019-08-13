@@ -16,9 +16,10 @@
 		<link href="./wedding/css" rel="stylesheet" type="text/css">
 		<link href="./wedding/css(1)" rel="stylesheet" type="text/css">
 		<!-- FontAwesome JS-->
-		<script defer="" src="./wedding/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+		
 		<!-- Global CSS -->
 		<link rel="stylesheet" href="./wedding/bootstrap.min.css">
+		
 		<!-- Plugins CSS -->   
 		<link rel="stylesheet" href="./wedding/style.css">
 		<link rel="stylesheet" href="./wedding/animate.min.css">
@@ -28,7 +29,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Facebook Pixel Code -->
 		<script type="text/javascript" src="./wedding/jquery-3.3.1.min.js"></script>
+		<script src="./wedding/all.js"></script>
 		<script type="text/javascript" src="./wedding/jquery.blueimp-gallery.min.js"></script>
+		<script type="text/javascript" src="./wedding/bootstrap.min.js"></script>
 		<script>
 
 
@@ -63,20 +66,6 @@
 		</style>
 	</head>
 	<body data-spy="scroll">
-		<div id="fb-root" class=" fb_reset">
-			<div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
-				<div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./wedding/xd_arbiter.html" style="border: none;"></iframe></div>
-				<div></div>
-			</div>
-		</div>
-		<script>(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
 		<!-- ******HEADER****** --> 
 		<header id="header" class="header fixed-top">
 			<div class="container ">
@@ -239,7 +228,7 @@
 		<section id="gallery" class="gallery-section section">
 			<div class="container text-center">
 				<h3 class="title script"><span class="title-deco-left"></span><span class="title-text animated fadeInUp delayp2" style="opacity: 0;">Gallery</span><span class="title-deco-right"></span></h3>
-				<div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div>
+				<div class="intro">Photo taken by <a href="https://www.facebook.com/kenhuynhphoto" target="_blank">Ken Huỳnh</a> in our hometown and in our high school (^_^)</div>
 				<div class="gallery-container">
 					<div id="photos-wrapper" class="photos-wrapper" style="position: relative; height: 1110.85px;">
 						<div class="item" style="position: absolute; left: 0%; top: 0px;"><a href="./wedding/pic-1.jpg" data-gallery=""><img class="img-fluid" src="./wedding/pic-1.jpg" alt=""></a></div>
@@ -261,55 +250,37 @@
 						<div class="item" style="position: absolute; left: 50%; top: 925px;"><a href="./wedding/pic-17.jpg" data-gallery=""><img class="img-fluid" src="./wedding/pic-17.jpg" alt=""></a></div>
 						<div class="item" style="position: absolute; left: 74.955%; top: 925px;"><a href="./wedding/pic-18.jpg" data-gallery=""><img class="img-fluid" src="./wedding/pic-18.jpg" alt=""></a></div>
 					</div>
-					<!--//photos-wrapper-->
 				</div>
-				<!--//gallery-container-->
 			</div>
-			<!--//container-->
 		</section>
-		<!--//gallery-section-->
-		<!-- ******Gift Section****** -->
 		<section id="gift" class="gift-section section">
 			<div class="container text-center">
 				<h3 class="title script"><span class="title-deco-left"></span><span class="title-text animated fadeInUp delayp2" style="opacity: 0;"><span class="d-none d-lg-inline">Gift</span> Registries</span><span class="title-deco-right"></span></h3>
 				<div class="message-container">
 					<div class="message-inner mx-auto">
-						<div class="intro">The most important gift to us is to have you
-							share our day. However if you do wish to buy us a gift you can check out the registry lists below. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						</div>
+						<div class="intro">The most important gift to us is to have you share our day. </div>
 						<div class="thank-you script">Thank you so much! :)</div>
 						<div class="signature script">Đông Tri &amp; Thái Sơn</div>
 						<div class="couple-profile animated bounceIn delayp3" style="opacity: 0;"></div>
 					</div>
-					<!--//message-inner-->
 				</div>
 			</div>
-			<!--//container-->
 		</section>
-		<!--//gift-section-->
-		<!-- ******FOOTER****** --> 
 		<footer class="footer">
 			<div class="footer-content text-center">
 				<div class="container">
 					<div class="credit">Photos by <a href="https://www.facebook.com/kenhuynhphoto" target="_blank">Ken Huỳnh</a></div>
 				</div>
-				<!--//container-->       
 			</div>
-			<!--//footer-content-->
 		</footer>
-		<!--//footer-->
-		<!-- The Bootstrap Image Gallery lightbox -->
 		<div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
-			<!-- The container for the modal slides -->
 			<div class="slides"></div>
-			<!-- Controls for the borderless lightbox -->
 			<h3 class="title"></h3>
 			<a class="prev">‹</a>
 			<a class="next">›</a>
 			<a class="close">×</a>
 			<a class="play-pause"></a>
 			<ol class="indicator"></ol>
-			<!-- The modal dialog, which will be used to wrap the lightbox content -->
 			<div class="modal fade" tabindex="-1">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -332,8 +303,6 @@
 				</div>
 			</div>
 		</div>
-		<!--blueimp-gallery-->
-		<!-- RSVP Modal -->
 		<div id="rsvp-modal" class="modal modal-rsvp" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -344,7 +313,6 @@
 							<span class="subtitle display-block">Come and celebrate with us! <br> Please RSVP by May 16, 2020</span>
 						</h2>
 					</div>
-					<!--//modal-header-->
 					<div class="modal-body">
 						<form id="rsvp-form" class="rsvp-form form" method="post" action="https://themes.3rdwavemedia.com/matrimony/bs4/4.0/mailer.php" novalidate="novalidate">
 							<div id="form-messages" class="text-center"></div>
@@ -405,20 +373,12 @@
 								<div class="additional-info text-center col-12">
 									If you have any questions please let us know. You can either email us at <a href="https://themes.3rdwavemedia.com/matrimony/bs4/4.0/#">amynickwedding@gmail.com</a> or give us a ring at 0133 123455
 								</div>
-								<!--//notes-->    
 							</div>
-							<!--//row-->
 						</form>
-						<!--//rsvp-form-->
 					</div>
-					<!--//modal-body-->
 				</div>
-				<!--//modal-content-->
 			</div>
-			<!--//modal-dialog-->
 		</div>
-		<!--//modal-->
-		<!-- Direction Modal-->
 		<div id="direction-modal" class="direction-modal modal" tabindex="-1" role="dialog" aria-labelledby="directionModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -426,7 +386,6 @@
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 						<h4 class="modal-title text-center" id="directionModalLabel">How to get to the events</h4>
 					</div>
-					<!--//modal-header-->
 					<div class="modal-body">
 						<div class="row">
 							<div class="event-col col-12 col-md-6">
