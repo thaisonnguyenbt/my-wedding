@@ -496,13 +496,13 @@ label{
     height:460px
 }
 .story-section{
-    background:#413a38 url("../images/story-bg.jpg") no-repeat 50% top;
+    background:#413a38 url("../images/story-bg2.jpg") no-repeat 50% top;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
     background-size:cover;
     padding-top:60px;
-    padding-bottom:90px
+    padding-bottom:350px
 }
 .story-section .container{
     position:relative
