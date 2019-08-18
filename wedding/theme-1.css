@@ -111,7 +111,7 @@ a.btn-primary:focus,.btn-primary:focus{
     box-shadow:none
 }
 .script{
-    font-family:'Satisfy', cursive;
+    font-family:'Norican', cursive;
     font-weight:bold
 }
 input[type="text"],input[type="email"],input[type="password"],input[type="submit"],input[type="button"],textarea{
@@ -304,7 +304,7 @@ label{
 .nav>li>a{
     color:#fff;
     color:rgba(255,255,255,0.7);
-    font-size:14px;
+    font-size:18px;
     font-weight:500
 }
 .nav>li>a:focus,.nav>li>a:hover{
@@ -371,9 +371,10 @@ label{
     border-radius: 100px;
 }
 .hero-box .date{
-    font-size:28px;
-    color:#413a38;
-    background:transparent url("../images/ribbon-lime.svg") no-repeat center top;
+    font-size:50px;
+    font-family: 'Meddon', cursive;
+    color:gold;
+    /*background:transparent url("../images/ribbon-lime.svg") no-repeat center top;*/
     height:126px;
     padding-top:8px;
     font-weight:bold;
@@ -382,8 +383,12 @@ label{
     -moz-opacity:.85;
     opacity:.85
 }
+
+.nav-link.scrollto {
+    cursor: pointer;
+}
 .headline .names{
-    font-size:76px;
+    font-size:115px;
     margin-bottom:20px
 }
 .headline .statement{
@@ -502,7 +507,8 @@ label{
     -o-background-size:cover;
     background-size:cover;
     padding-top:60px;
-    padding-bottom:350px
+    padding-bottom:350px;
+    height: 1400px;
 }
 .story-section .container{
     position:relative
@@ -899,7 +905,14 @@ label{
     -webkit-overflow-scrolling:auto !important;
     overflow-y:auto !important
 }
-@media (max-width: 767px){
+
+@media (max-width: 375px){
+    .story-container {
+        margin-top: 500px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
     .modal .modal-dialog{
         width:auto
     }
@@ -954,9 +967,23 @@ label{
         background-size:contain
     }
     .hero-section{
-        background-position:70% 50%;
+        background-position:62% 50%;
         height:auto
     }
+
+    .story-container {
+        margin-top: 600px;
+    }
+
+    .story-section {
+        background-position: 25%;
+        padding-bottom: 10px;
+    }
+
+    .story-box .content-container{
+        background:rgba(255,255,255,0.5);
+    }
+
     .headline .names{
         font-size:60px
     }
