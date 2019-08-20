@@ -24,48 +24,8 @@
 		<script src="./wedding/all.js"></script>
 		<script type="text/javascript" src="./wedding/jquery.blueimp-gallery.min.js"></script>
 		<script type="text/javascript" src="./wedding/bootstrap.min.js"></script>
-		<script>
-			$(document).ready(function (){
-				function startTimer(time, element) {
-					setInterval(function () {
-
-						var diff = new Date(time).getTime() - new Date().getTime();
-						if (diff > 0) {
-							var seconds = parseInt(diff / 1000);
-							var days = parseInt(seconds / 60 / 60 / 24);
-							var hours = parseInt(seconds / 60 / 60) - (days * 24);
-							var minutes = parseInt(seconds / 60) % 60;
-							seconds = seconds % 60;
-
-							$(element).find(".days .number").html(days);
-							$(element).find(".hours .number").html(hours);
-							$(element).find(".minutes .number").html(minutes);
-							$(element).find(".secs .number").html(seconds);
-							$(element).fadeIn();
-						}
-						
-					}, 1000);
-				}
-
-				$(document).ready(function (){
-					$(".nav-link.scrollto").click(function (){
-						var hash = $(this).attr("scroll-position");
-						var position = $("#" + hash).offset().top;
-
-						if (hash == "location" || hash == "story") {
-							position -= 50;
-						}
-						$('html, body').animate({
-							scrollTop: position
-						}, 800);
-					});
-				});
-
-				jQuery(function ($) {
-					startTimer("2020-01-04T05:00:00", $("#church-countdown-box"));
-				});
-			});
-		</script>
+		<script type="text/javascript" src="./wedding/custom.js"></script>
+		
 		<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
 			.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
 			.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
@@ -82,10 +42,11 @@
 					</button> 
 					<div id="navbar-collapse" class="navbar-collapse collapse text-center justify-content-center">
 						<ul class="nav navbar-nav">
-							<li class="nav-item"><a class="nav-link scrollto" scroll-position="wedding">The Wedding</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" scroll-position="location">Location</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" scroll-position="story">Our Story</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" scroll-position="gallery">Gallery</a></li>
+							<li class="nav-item"><a id="menu-wedding-text" class="nav-link scrollto" scroll-position="wedding">The Wedding</a></li>
+							<li class="nav-item"><a id="menu-location-text" class="nav-link scrollto" scroll-position="location">Location</a></li>
+							<li class="nav-item"><a id="menu-story-text" class="nav-link scrollto" scroll-position="story">Our Story</a></li>
+							<li class="nav-item"><a id="menu-gallery-text" class="nav-link scrollto" scroll-position="gallery">Gallery</a></li>
+							<li class="nav-item"><a id="menu-language-text" class="nav-link" style="cursor: pointer">Tiếng Việt</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -122,30 +83,39 @@
 		<!--//hero-section-->
 		<!-- ******Wedding Section****** -->
 		<section id="wedding" class="wedding-section section">
+			<div class="text-center">
+				<div class="action-wrapper">
+					<a id="btn-change-language" class="btn btn-primary" style="cursor: pointer">Tiếng Việt</a>
+				</div>
+			</div>
 			<div class="container text-center">
-				<h3 class="title script"><span class="title-deco-left"></span><span class="title-text animated fadeInUp delayp2" style="opacity: 0;">The Wedding</span><span class="title-deco-right"></span></h3>
+				<h3 class="title script">
+					<span class="title-deco-left"></span>
+					<span id="the-wedding-text" class="title-text animated fadeInUp delayp2" style="opacity: 0;">The Wedding</span>
+					<span class="title-deco-right"></span>
+				</h3>
 				<div id="church-countdown-box" class="countdown-box" style="display: none;">
 					<span class="days">
-						<span class="number">386</span>
-						<span class="unit script">Days</span>
+						<span class="number"></span>
+						<span id="days-text" class="unit script">Days</span>
 					</span>
 					<span class="hours">
-						<span class="number">13</span>
-						<span class="unit script">Hrs</span>
+						<span class="number"></span>
+						<span id="hours-text"class="unit script">Hrs</span>
 					</span>
 					<span class="minutes">
-						<span class="number">27</span>
-						<span class="unit script">Mins</span>
+						<span class="number"></span>
+						<span id="minutes-text" class="unit script">Mins</span>
 					</span>
 					<span class="secs">
-						<span class="number">30</span>
-						<span class="unit script">Secs</span>
+						<span class="number"></span>
+						<span id="seconds-text" class="unit script">Secs</span>
 					</span>
 				</div>
 				<div class="row cols-wrapper">
 					<div class="ceremony-col col-12 col-md-4">
 						<div class="col-inner">
-							<h4 class="subtitle">Ceremony</h4>
+							<h4 id="ceremony-text" class="subtitle">Ceremony</h4>
 							<p class="intro">We are getting married at Cái Mơn Church. Please come to share the joy with us on <strong>Saturday, 4th January 2020 at 5am</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family int this very special moment.</p>
 							<ul class="meta-list list-unstyled text-left center-block">
 								<li><span class="icon-calendar love-icon"></span>Saturday - January 4th 2020</li>
@@ -201,11 +171,11 @@
 									</ol>
 									<div class="carousel-inner" role="listbox">
 										<div class="item carousel-item active">
-											<h4 class="item-title text-center"><span class="icon-couple love-icon"></span>We're best friends</h4>
-											<p>It isn't a love from the first sight.</p>
-											<p>We started as friends in a same class in high school in 2005, when we were 15. We studied, played and laugh together as friends, sometimes we shared the earphone of the ipod borrowed from another friend and enjoyed the music together in the time break. But... I didn't really enjoy the music but enjoyed the peaceful moments with her instead (^_^)</p>
-											<p>In the second year of high shool, I found myself had a crush on her. I didn't notice that "weird" feeling kept growing up inside me until I realized I might cannot be by her side anymore. There're many "teenagers" things happened that we couldn't handle and I thought it's just a feeling of youth and wouldn't last for long. I wrote her a letter, saying that I will focus on the university exam in next year instead and take it as a test for ourselves. She's the main reason made me study so hard for the university :))</p>
-											<p>After the exam in 2008, we managed to get into the same national university in Ho Chi Minh city. But because I am a pessimistic person, during those 4 years of university, I still kept worrying too much about the future and my family's condition. Until I found my first job and could earn the money on my own in 2012, we had our fist date (^_^)</p>
+											<h4 class="item-title text-center"><span class="icon-couple love-icon"></span><span id="story-1-title">We're best friends</span></h4>
+											<p id="story-1-1">It isn't a love from the first sight.</p>
+											<p id="story-1-2">We started as friends in a same class in high school in 2005, when we were 15. We studied, played and laugh together as friends, sometimes we shared the earphone of the ipod borrowed from another friend and enjoyed the music together in the time break, but actually, I was there... not for the music :))</p>
+											<p id="story-1-3">In the second year of high shool, I found myself had a crush on her. I didn't notice that "weird" feeling kept growing up inside me until I realized I might cannot be by her side anymore. There're many "teenagers" things happened that we couldn't handle and I thought it's just a feeling of youth and wouldn't last for long. I wrote her a letter, saying that I will focus on the university exam in next year instead and take it as a test for ourselves. She's the main reason made me study so hard for the university <img style="width: 30px" src="./images/nerd.png"/></p>
+											<p id="story-1-4">After the exam in 2008, we managed to get into the same national university in Ho Chi Minh city. But because I am a pessimistic person, during those 4 years of university, I still kept worrying too much about the future and my family's financial condition. Until I found my first job and could earn the money on my own in 2012, we had our fist date<img style="width: 30px" src="./images/love-heart.png"/></p>
 										</div>
 										<div class="item carousel-item">
 											<h4 class="item-title text-center"><span class="icon-jar love-icon"></span>We hold hands</h4>
