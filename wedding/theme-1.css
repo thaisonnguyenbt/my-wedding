@@ -449,7 +449,7 @@ label{
     background-clip:padding-box
 }
 .wedding-section .subtitle{
-    font-size:28px;
+    font-size:26px;
     font-weight:bold;
     margin-top:0;
     margin-bottom:30px
@@ -904,6 +904,10 @@ label{
 .modal{
     -webkit-overflow-scrolling:auto !important;
     overflow-y:auto !important
+}
+
+.cols-wrapper strong {
+    color: #992233
 }
 
 @media (max-width: 375px){

@@ -5,7 +5,7 @@
 		<title>Đông Tri & Thái Sơn</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="https://themes.3rdwavemedia.com/matrimony/bs4/4.0/favicon.ico">
+		<link rel="shortcut icon" href="./favicon.ico">
 		<link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet'>
 		<link href='./wedding/fonts/loveicon.ttf?66ozqq' rel='stylesheet'>
 		<link href="./wedding/css" rel="stylesheet" type="text/css">
@@ -80,8 +80,6 @@
 			</div>
 			<div class="curve-holder"></div>
 		</div>
-		<!--//hero-section-->
-		<!-- ******Wedding Section****** -->
 		<section id="wedding" class="wedding-section section">
 			<div class="text-center">
 				<div class="action-wrapper">
@@ -115,38 +113,61 @@
 				<div class="row cols-wrapper">
 					<div class="ceremony-col col-12 col-md-4">
 						<div class="col-inner">
-							<h4 id="ceremony-text" class="subtitle">Ceremony</h4>
-							<p class="intro">We are getting married at Cái Mơn Church. Please come to share the joy with us on <strong>Saturday, 4th January 2020 at 5am</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family int this very special moment.</p>
+							<h4 id="ceremony-text" class="subtitle">Church Ceremony</h4>
+							<p id="ceremony-description-text" class="intro">We are getting married at Cái Mơn Church. Please come to share the joy with us at <strong>5am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.</p>
 							<ul class="meta-list list-unstyled text-left center-block">
-								<li><span class="icon-calendar love-icon"></span>Saturday - January 4th 2020</li>
-								<li><span class="icon-clock love-icon"></span>5:00am - 6:00am</li>
-								<li><span class="icon-map love-icon"></span>Cái Mơn Church</li>
+								<li>
+									<span class="icon-calendar love-icon"></span>
+									<span id="ceremony-text-1" >Saturday - January 4th 2020</span>
+								</li>
+								<li>
+									<span class="icon-clock love-icon"></span>
+									<span id="ceremony-text-2">5:00am - 6:00am</span>
+								</li>
+								<li>
+									<span class="icon-map love-icon"></span>
+									<span id="ceremony-text-3">Cái Mơn Church</span>
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="ceremony-col col-12 col-md-4">
 						<div class="col-inner">
-							<h4 class="subtitle">January 4th</h4>
-							<p class="intro">The party will take place after the ceremony at the Manor House.
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. 
-							</p>
+							<h4 id="bride-wedding-text" class="subtitle">Betrothal Rituals</h4>
+							<p id="bride-wedding-description-text" class="intro">Deputation of groom's parents and the senior relatives will come to bride's family and we'll have Vietnamese's traditional pre-wedding rituals at <strong>8am</strong>, followed by 2 celebration parties at <strong>11am</strong> and <strong>3pm</strong>.</p>
 							<ul class="meta-list list-unstyled text-left center-block">
-								<li><span class="icon-calendar love-icon"></span>Saturday - July 16th, 2020</li>
-								<li><span class="icon-clock love-icon"></span>16:00pm - 24:00pm</li>
-								<li><span class="icon-map love-icon"></span>The Manor House</li>
+								<li>
+									<span class="icon-calendar love-icon"></span>
+									<span id="bride-wedding-text-1">Saturday - January 4th, 2020</span>
+								</li>
+								<li>
+									<span class="icon-clock love-icon"></span>
+									<span id="bride-wedding-text-2">8:00am | 11:00am | 3:00pm</span>
+								</li>
+								<li>
+									<span class="icon-map love-icon"></span>
+									<span id="bride-wedding-text-3">Bride's House</span>
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="reception-col col-12 col-md-4">
 						<div class="col-inner">
-							<h4 class="subtitle">January 5th</h4>
-							<p class="intro">The party will take place after the ceremony at the Manor House.
-								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa. 
-							</p>
+							<h4 id="groom-wedding-text" class="subtitle">Wedding</h4>
+							<p id="wedding-description-text" class="intro">In Sunday morning, the groom's procession will come to bride's house at <strong>9am</strong> to do bride pick up ritual. After arriving to groom's house, ancestral ceremony will be conducted at <strong>10am</strong> and followed by the celebration party.</p>
 							<ul class="meta-list list-unstyled text-left center-block">
-								<li><span class="icon-calendar love-icon"></span>Saturday - July 16th, 2020</li>
-								<li><span class="icon-clock love-icon"></span>16:00pm - 24:00pm</li>
-								<li><span class="icon-map love-icon"></span>The Manor House</li>
+								<li>
+									<span class="icon-calendar love-icon"></span>
+									<span id="groom-wedding-text-1">Sunday - January 5th, 2020</span>
+								</li>
+								<li>
+									<span class="icon-clock love-icon"></span>
+									<span id="groom-wedding-text-2">10:00am</span>
+								</li>
+								<li>
+									<span class="icon-map love-icon"></span>
+									<span id="groom-wedding-text-3">Groom's House</span>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -273,82 +294,6 @@
 							<i class="glyphicon glyphicon-chevron-right"></i>
 							</button>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="rsvp-modal" class="modal modal-rsvp" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h2 id="rsvpModalLabel" class="modal-title text-center">
-							<span class="title script display-block"><span class="title-deco-left"></span><span class="title-text">RSVP</span><span class="title-deco-right"></span></span>
-							<span class="subtitle display-block">Come and celebrate with us! <br> Please RSVP by May 16, 2020</span>
-						</h2>
-					</div>
-					<div class="modal-body">
-						<form id="rsvp-form" class="rsvp-form form" method="post" action="https://themes.3rdwavemedia.com/matrimony/bs4/4.0/mailer.php" novalidate="novalidate">
-							<div id="form-messages" class="text-center"></div>
-							<div class="row text-left">
-								<div class="name-group form-group col-12 col-md-6">
-									<div class="form-group-inner">
-										<label for="cname">Name</label>
-										<input type="text" class="form-control" id="cname" name="name" placeholder="Your full name" minlength="2" aria-required="true" required="">
-									</div>
-								</div>
-								<div class="email-group form-group col-12 col-md-6">
-									<div class="form-group-inner">
-										<label for="cemail">Email</label>
-										<input type="email" class="form-control" id="cemail" name="email" placeholder="Your email address" aria-required="true" required="">
-									</div>
-								</div>
-								<div class="events-group form-group col-12 col-md-6">
-									<div class="form-group-inner">
-										<label for="cevents">Which events are you attending?</label>
-										<select class="form-control" id="cevents" name="events" aria-required="true" required="">
-											<option value="" selected="">Please select</option>
-											<option value="Ceremony and Reception">Ceremony and Reception</option>
-											<option value="Ceremony Only">Ceremony Only</option>
-											<option value="Reception Only">Reception Only</option>
-											<option value="Sorry, can&#39;t make either">Sorry, can't make either</option>
-										</select>
-									</div>
-								</div>
-								<div class="guests-group form-group col-12 col-md-6">
-									<div class="form-group-inner">
-										<label for="cguests">How many guests are you bringing?</label>
-										<select class="form-control" id="cguests" name="guests" aria-required="true" required="">
-											<option value="" selected="">Please select</option>
-											<option value="No Guests">No Guests</option>
-											<option value="1 Guest">1 Guest</option>
-											<option value="2 Guests">2 Guests</option>
-											<option value="3 Guests">3 Guests</option>
-											<option value="4 Guests">4 Guests</option>
-											<option value="5 Guests">5 Guests</option>
-										</select>
-									</div>
-								</div>
-								<div class="guestinfo-group form-group col-12" style="display:none">
-									<div class="form-group-inner">
-										<label for="cguestinfo">Guest(s) Name(s)</label>
-										<textarea class="form-control" id="cguestinfo" name="guestinfo" placeholder="Please provide full name(s)" required="" aria-required="true"></textarea>
-									</div>
-								</div>
-								<div class="message-group form-group col-12">
-									<div class="form-group-inner">
-										<label for="cmessage">Additional Information</label>
-										<textarea class="form-control" id="cmessage" name="message" placeholder="eg. Vegetarian &amp; dietary requests"></textarea>
-									</div>
-								</div>
-								<div class="form-group col-12">
-									<button type="submit" class="btn btn-block btn-primary">Submit</button>
-								</div>
-								<div class="additional-info text-center col-12">
-									If you have any questions please let us know. You can either email us at <a href="https://themes.3rdwavemedia.com/matrimony/bs4/4.0/#">amynickwedding@gmail.com</a> or give us a ring at 0133 123455
-								</div>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>
