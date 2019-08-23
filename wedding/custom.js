@@ -56,7 +56,7 @@ $(document).ready(function (){
         "story-1-4" : "Không biết xui hay hên, tụi mình đỗ chung trường đại học, nhưng những năm tháng trên giảng đường cũng lặng lẽ trôi qua với những lo toan riêng của mỗi đứa về cuộc sống, về tương lai. Tụi mình có buổi hẹn đầu tiên khi mình có tháng lương đầu tiên ^^",
         "gallery-text" : "Thư Viện Ảnh",
         "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ờ quê và trường cũ của 2 đứa (^_^)",
-        "save-the-date-text" : "Save The Date",
+        "save-the-date-text" : "Hoà Cùng Niềm Vui",
         "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải giải quyết và dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất. Vì vậy..."
     };
 
@@ -73,17 +73,17 @@ $(document).ready(function (){
         "minutes-text" : "Mins",
         "seconds-text" : "Secs",
         "ceremony-text" : "Ceremony",
-        "ceremony-text-1" : "Saturday - January 4th 2020",
+        "ceremony-text-1" : "Saturday - 04/01/2020",
         "ceremony-text-2" : "5:00am - 6:00am",
         "ceremony-text-3" : "Cái Mơn Church",
         "ceremony-description-text" : "We are getting married at Cái Mơn Church. Please come to share the joy with us at <strong>5am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.",
         "bride-wedding-text" : "Betrothal Rituals",
-        "bride-wedding-text-1" : "Saturday - January 4th, 2020",
+        "bride-wedding-text-1" : "Saturday - 04/01/2020",
         "bride-wedding-text-2" : "8:00am | 11:00am | 3:00pm",
         "bride-wedding-text-3" : "Bride's House",
         "bride-wedding-description-text" : "Deputation of groom's parents and the senior relatives will come to bride's family and we'll have Vietnamese's traditional pre-wedding rituals at <strong>8am</strong>, followed by 2 celebration parties at <strong>11am</strong> and <strong>3pm</strong>.",
         "groom-wedding-text" : "Wedding",
-        "groom-wedding-text-1" : "Sunday - January 5th, 2020",
+        "groom-wedding-text-1" : "Sunday - 05/01/2020",
         "groom-wedding-text-2" : "10:00am",
         "groom-wedding-text-3" : "Groom's House",
         "wedding-description-text" : "In Sunday morning, the groom's procession will come to bride's house at <strong>9am</strong> to do bride pick up ritual. After arriving to groom's house, ancestral ceremony will be conducted at <strong>10am</strong> and followed by the celebration party.",
@@ -95,7 +95,7 @@ $(document).ready(function (){
         "story-1-4" : "After the exam in 2008, we managed to get into the same university in Ho Chi Minh city. But because I am a pessimistic person, during those 4 years of university, I still kept worrying too much about the future and my family's financial condition. Until I found my first job and could earn the money on my own in 2012, we had our first date <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
         "gallery-text" : "Gallery",
         "gallery-taken-text" : "Photos taken by <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh</a> in our hometown and in our high school (^_^)",
-        "save-the-date-text" : "Save The Date",
+        "save-the-date-text" : "Share Our Happiness",
         "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải giải quyết và dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất. Vì vậy...",
     }
 
@@ -125,6 +125,53 @@ $(document).ready(function (){
             $.each(language, function(key, value) {
                 $("#" + key).html(value);
             });
+        });
+
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        $(".btn-submit.btn-primary").click(function (event){
+            var name = $("#cname").val().trim();
+            var email = $("#cemail").val().trim();
+            var message = $("#cmessage").val().trim();
+            var isError = false;
+            if (!name) {
+                $("#cname").addClass("error");
+                isError = true;
+            } else {
+                $("#cname").removeClass("error");
+            }
+
+            if (!email || !validateEmail(email)) {
+                isError = true;
+                $("#cemail").addClass("error");
+            } else {
+                $("#cemail").removeClass("error");
+            }
+
+            if (!message) {
+                isError = true;
+                $("#cmessage").addClass("error");
+            } else {
+                $("#cmessage").removeClass("error");
+            }
+            if (isError) {
+                event.preventDefault();
+            } else {
+                var $form = $("#rsvp-form");
+                $form.submit(function(){
+                    $.post($(this).attr('action'), $(this).serialize(), function(response){
+                        $("#cname").val('');
+                        $("#cemail").val('');
+                        $("#cmessage").val('');
+                    },'json');
+                    return false;
+                });
+                $("#rsvp-modal").modal("hide");
+                
+            }
         });
     });
 
