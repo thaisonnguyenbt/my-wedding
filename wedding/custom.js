@@ -163,14 +163,16 @@ $(document).ready(function (){
                 var $form = $("#rsvp-form");
                 $form.submit(function(){
                     $.post($(this).attr('action'), $(this).serialize(), function(response){
-                        $("#cname").val('');
-                        $("#cemail").val('');
-                        $("#cmessage").val('');
+                        
                     },'json');
                     return false;
                 });
                 $("#rsvp-modal").modal("hide");
-                
+                setTimeout(function() {
+                    $("#cname").val('');
+                    $("#cemail").val('');
+                    $("#cmessage").val('');
+                }, 500)
             }
         });
     });
