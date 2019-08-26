@@ -730,7 +730,7 @@ label{
 .comments-section{
     padding-top:60px;
     padding-bottom:60px;
-    background:#7278e4 url("../images/heart-pattern.png") repeat center top
+    background:#f4af9c url("../images/heart-pattern.png") repeat center top
 }
 .comments-section .title{
     font-size:24px;
@@ -836,7 +836,12 @@ label{
     margin-right:5px
 }
 .modal .figure-container{
-    margin-bottom:30px
+    margin-bottom:30px;
+    text-align: center;
+}
+.map-main-container {
+    display: inline-block;
+    margin-left: -2px
 }
 .modal .figure-container img{
     -webkit-border-radius:10px;
@@ -846,7 +851,8 @@ label{
     border-radius:10px;
     -moz-background-clip:padding;
     -webkit-background-clip:padding-box;
-    background-clip:padding-box
+    background-clip:padding-box;
+    max-width: 500px;
 }
 .modal .facilities-list{
     margin-bottom:30px
@@ -877,9 +883,7 @@ label{
     margin-bottom:15px;
     color:#786b67
 }
-.direction-modal .modal-dialog{
-    width:80%
-}
+
 .blueimp-gallery>.close{
     font-weight:300;
     font-size:32px;
@@ -956,6 +960,13 @@ label{
     .story-container {
         margin-top: 600px;
     }
+    #direction-modal .modal-content .modal-body {
+        padding:30px 0;
+    }
+
+    #rsvp-modal2 .modal-content .modal-body, #rsvp-modal .modal-content .modal-body {
+        padding:30px 20px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -978,12 +989,21 @@ label{
     .story-section {
         overflow: scroll;
     }
+    .title-deco-left, .title-deco-right {
+        display: none;
+    }
+    .direction-modal .modal-dialog, .modal-rsvp .modal-dialog {
+        width:96%;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 620px) {
     .story-section {
         background-position: 22%;
         padding-bottom: 10px;
+    }
+    .direction-modal .modal-dialog, .modal-rsvp .modal-dialog {
+        width:96%;
     }
 }
 
@@ -992,11 +1012,14 @@ label{
         background-position: 14%;
         padding-bottom: 10px;
     }
+    .direction-modal .modal-dialog, .modal-rsvp .modal-dialog {
+        width:96%;
+    }
 }
 
 @media (min-width: 376px) and (max-width: 767px) {
     .modal .modal-dialog{
-        width:auto
+        width:96%;
     }
     .modal .modal-body{
         padding:30px

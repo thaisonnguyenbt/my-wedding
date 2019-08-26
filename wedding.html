@@ -58,6 +58,7 @@
 							<li class="nav-item"><a id="menu-location-text" class="nav-link scrollto" scroll-position="location">Location</a></li>
 							<li class="nav-item"><a id="menu-story-text" class="nav-link scrollto" scroll-position="story">Our Story</a></li>
 							<li class="nav-item"><a id="menu-gallery-text" class="nav-link scrollto" scroll-position="gallery">Gallery</a></li>
+							<li class="nav-item"><a id="menu-get-there-text" class="nav-link" data-toggle="modal" data-target="#direction-modal" style="cursor: pointer">How to get there</a></li>
 							<li class="nav-item"><a id="menu-language-text" class="nav-link" style="cursor: pointer">Tiếng Việt</a></li>
 						</ul>
 					</div>
@@ -94,7 +95,7 @@
 		<section id="wedding" class="wedding-section section">
 			<div class="text-center">
 				<div class="action-wrapper">
-					<a id="btn-change-language" class="btn btn-primary" style="cursor: pointer">Tiếng Việt</a>
+					<a  class="btn btn-primary" style="cursor: pointer" data-toggle="modal" data-target="#rsvp-modal2">Pickup Registration</a>
 				</div>
 			</div>
 			<div class="container text-center">
@@ -278,7 +279,7 @@
 					<div class="message-inner mx-auto">
 						<div class="intro">Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải giải quyết và dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất. Vì vậy...</div>
 						<div class="action-wrapper">
-							<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#rsvp-modal">Send Wishes</a>
+							<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#rsvp-modal">Send Private Wishes</a>
 						</div>
 						<div class="couple-profile animated bounceIn delayp3" style="opacity: 0;"></div>
 					</div>
@@ -286,7 +287,6 @@
 				<div class="thank-you script" style="font-size: 46px;color: #f4af9c;">Thank you so much! :)</div>
 				<div class="signature script" style="font-size: 28px;color: #786b67;">Đông Tri &amp; Thái Sơn</div>
 			</div>
-			
 		</section>
 		<section id="comments" class="comments-section section">
 			<div class="container text-center">	
@@ -299,7 +299,7 @@
 		<footer class="footer">
 			<div class="footer-content text-center">
 				<div class="container">
-					<div class="credit">Photos by <a href="https://www.facebook.com/kenhuynhphoto" target="_blank">Ken Huỳnh</a></div>
+					<div class="credit">Made with many love ^_^</a></div>
 				</div>
 			</div>
 		</footer>
@@ -333,7 +333,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="rsvp-modal" class="modal modal-rsvp" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel" aria-modal="true">
+		<div id="rsvp-modal" class="modal modal-rsvp animated fadeIn tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel" aria-modal="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -341,7 +341,7 @@
 						<h2 id="rsvpModalLabel" class="modal-title text-center">
 							<span class="title script display-block">
 								<span class="title-deco-left"></span>
-								<span class="title-text">Send Wishes</span>
+								<span class="title-text">Send Private Wishes</span>
 								<span class="title-deco-right"></span>
 							</span>
 							<span class="subtitle display-block">Your wishes warm our hearts ^^</span>
@@ -372,11 +372,11 @@
 								</div>
 								
 								<div class="form-group col-12">
-									<button type="submit" class="btn btn-block btn-submit btn-primary">Submit</button>
+									<button type="submit" class="btn btn-block btn-submit btn-primary btn-send-wish">Submit</button>
 								</div>   
 								
 								<div class="additional-info text-center col-12">
-									If you have any questions please let us know. You can either email us at <a href="mailto:thaisonnguyenbt@gmail.com">thaisonnguyenbt@gmail.com</a> or give us a ring.
+									If you have any questions please let us know. You can either email me at <a href="mailto:thaisonnguyenbt@gmail.com">thaisonnguyenbt@gmail.com</a>.
 								</div>
 							</div>
 						</form>
@@ -384,163 +384,134 @@
 				</div>
 			</div>
 		</div>
-		<div id="direction-modal" class="direction-modal modal" tabindex="-1" role="dialog" aria-labelledby="directionModalLabel">
+		<div id="rsvp-modal2" class="modal modal-rsvp animated fadeIn" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel2" aria-modal="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h2 id="rsvpModalLabel2" class="modal-title text-center">
+							<span class="title script display-block">
+								<span class="title-deco-left"></span>
+								<span class="title-text">Pickup</span>
+								<span class="title-deco-right"></span>
+							</span>
+							<span class="subtitle display-block">If you're joining the trip from HCM City, please help to confirm your desired pickup location for better preparation.</span>
+						</h2>
+					</div>
+					<div class="modal-body">
+						<form id="rsvp-form2" class="rsvp-form form" method="POST" action="https://s6i5yga6rl.execute-api.ap-southeast-1.amazonaws.com/prd/rsvp" novalidate="novalidate">     
+							<div id="form-messages" class="text-center"></div>                  
+							<div class="row text-left">   
+								<div class="name-group form-group col-12 col-md-6">
+									<div class="form-group-inner">
+										<label for="cname">Name</label>
+										<input type="text" class="form-control" id="dname" name="name" placeholder="Your full name" minlength="2" aria-required="true" required="">
+									</div>
+								</div>                    
+								<div class="phone-group form-group col-12 col-md-6">
+									<div class="form-group-inner">
+										<label for="cphone">Phone number</label>
+										<input type="text" class="form-control" id="dphone" name="phone" placeholder="Your phone number" aria-required="true" required="">
+									</div>
+								</div>
+								<div class="events-group form-group col-12 col-md-6">
+									<div class="form-group-inner">
+										<label for="cevents">Which pickup location do you refer ?</label>
+										<select class="form-control" id="dlocation" name="location" aria-required="true" required="">                       
+											<option value="" selected="">Please select</option> 
+											<option value="Intel Product">Intel Product</option>
+											<option value="University of Sciences">University of Sciences</option>
+										</select>     
+									</div>       
+								</div>
+								<div class="guests-group form-group col-12 col-md-6">
+									<div class="form-group-inner">
+										<label for="cguests">How many seats do you need?</label>
+										<select class="form-control" id="dguests" name="guests" aria-required="true" required="">
+											<option value="" selected="">Please select</option>
+											<option value="1">1 Seat</option>
+											<option value="2">2 Seats</option>
+											<option value="3">3 Seats</option>
+											<option value="4">4 Seats</option>
+											<option value="5">5 Seats</option>
+										</select>   
+									</div>    
+								</div>
+								<div class="otherlocation-group form-group col-12">
+									<div class="form-group-inner">
+										<label for="cotherlocation">Other desired location on the way</label>
+										<input type="text" class="form-control" id="dotherlocation" name="otherlocation" placeholder="Pickup location on the way"></input>
+									</div>
+								</div>
+								<div class="message-group form-group col-12">
+									<div class="form-group-inner">
+										<label for="cmessage">Additional message</label>
+										<textarea class="form-control" id="dmessage" name="message" placeholder="Message content"></textarea>
+									</div>
+								</div>
+								
+								<div class="form-group col-12">
+									<button type="submit" class="btn btn-block btn-submit btn-primary btn-send-pickup">Submit</button>
+								</div>   
+								
+								<div class="additional-info text-center col-12">
+									If you have any questions please let us know. You can either email me at <a href="mailto:thaisonnguyenbt@gmail.com">thaisonnguyenbt@gmail.com</a>.
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="direction-modal" class="direction-modal modal animated fadeIn" tabindex="-1" role="dialog" aria-labelledby="directionModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-						<h4 class="modal-title text-center" id="directionModalLabel">How to get to the events</h4>
+						<h4 class="modal-title text-center" id="directionModalLabel">How to get to our village</h4>
 					</div>
 					<div class="modal-body">
 						<div class="row">
-							<div class="event-col col-12 col-md-6">
-								<h4 class="col-title text-center">Ceremony</h4>
-								<div class="col-subtitle script text-center">St. Paul's Church</div>
-								<div class="figure-container"><img class="img-fluid" src="./wedding/ceremony-building.jpg" alt=""></div>
-								<h5 class="section-title">
-									<svg class="svg-inline--fa fa-car fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="car" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-										<path fill="currentColor" d="M499.99 176h-59.87l-16.64-41.6C406.38 91.63 365.57 64 319.5 64h-127c-46.06 0-86.88 27.63-103.99 70.4L71.87 176H12.01C4.2 176-1.53 183.34.37 190.91l6 24C7.7 220.25 12.5 224 18.01 224h20.07C24.65 235.73 16 252.78 16 272v48c0 16.12 6.16 30.67 16 41.93V416c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h256v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-54.07c9.84-11.25 16-25.8 16-41.93v-48c0-19.22-8.65-36.27-22.07-48H494c5.51 0 10.31-3.75 11.64-9.09l6-24c1.89-7.57-3.84-14.91-11.65-14.91zm-352.06-17.83c7.29-18.22 24.94-30.17 44.57-30.17h127c19.63 0 37.28 11.95 44.57 30.17L384 208H128l19.93-49.83zM96 319.8c-19.2 0-32-12.76-32-31.9S76.8 256 96 256s48 28.71 48 47.85-28.8 15.95-48 15.95zm320 0c-19.2 0-48 3.19-48-15.95S396.8 256 416 256s32 12.76 32 31.9-12.8 31.9-32 31.9z"></path>
-									</svg>
-									<!-- <i class="fas fa-car"></i> --> By Car
-								</h5>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-								<h5 class="section-title">
-									<svg class="svg-inline--fa fa-train fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="train" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-										<path fill="currentColor" d="M448 96v256c0 51.815-61.624 96-130.022 96l62.98 49.721C386.905 502.417 383.562 512 376 512H72c-7.578 0-10.892-9.594-4.957-14.279L130.022 448C61.82 448 0 403.954 0 352V96C0 42.981 64 0 128 0h192c65 0 128 42.981 128 96zm-48 136V120c0-13.255-10.745-24-24-24H72c-13.255 0-24 10.745-24 24v112c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24zm-176 64c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56z"></path>
-									</svg>
-									<!-- <i class="fas fa-train"></i> --> By Train
-								</h5>
-								<p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+							<div class="event-col col-12">
+								<h4 class="col-title text-center">Church Ceremony</h4>
+								<div class="col-subtitle script text-center">Cái Mơn Church</div>
+								<div class="figure-container"><img class="img-fluid" src="./wedding/ceremony-building.jpg" style="width: 90%"></div>
 								<h5 class="section-title">
 									<svg class="svg-inline--fa fa-bus fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
 										<path fill="currentColor" d="M488 128h-8V80c0-44.8-99.2-80-224-80S32 35.2 32 80v48h-8c-13.25 0-24 10.74-24 24v80c0 13.25 10.75 24 24 24h8v160c0 17.67 14.33 32 32 32v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h192v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h6.4c16 0 25.6-12.8 25.6-25.6V256h8c13.25 0 24-10.75 24-24v-80c0-13.26-10.75-24-24-24zM112 400c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm16-112c-17.67 0-32-14.33-32-32V128c0-17.67 14.33-32 32-32h256c17.67 0 32 14.33 32 32v128c0 17.67-14.33 32-32 32H128zm272 112c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path>
 									</svg>
-									<!-- <i class="fas fa-bus"></i> --> By Bus
+									Our prepared trip
 								</h5>
-								<p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante.</p>
-							</div>
-							<!--//event-col-->
-							<div class="event-col col-12 col-md-6">
-								<h4 class="col-title text-center">Reception</h4>
-								<div class="col-subtitle script text-center">The Manor House</div>
-								<div class="figure-container"><img class="img-fluid" src="./wedding/reception-building.jpg" alt=""></div>
-								<h5 class="section-title">
-									<svg class="svg-inline--fa fa-car fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="car" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-										<path fill="currentColor" d="M499.99 176h-59.87l-16.64-41.6C406.38 91.63 365.57 64 319.5 64h-127c-46.06 0-86.88 27.63-103.99 70.4L71.87 176H12.01C4.2 176-1.53 183.34.37 190.91l6 24C7.7 220.25 12.5 224 18.01 224h20.07C24.65 235.73 16 252.78 16 272v48c0 16.12 6.16 30.67 16 41.93V416c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h256v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-54.07c9.84-11.25 16-25.8 16-41.93v-48c0-19.22-8.65-36.27-22.07-48H494c5.51 0 10.31-3.75 11.64-9.09l6-24c1.89-7.57-3.84-14.91-11.65-14.91zm-352.06-17.83c7.29-18.22 24.94-30.17 44.57-30.17h127c19.63 0 37.28 11.95 44.57 30.17L384 208H128l19.93-49.83zM96 319.8c-19.2 0-32-12.76-32-31.9S76.8 256 96 256s48 28.71 48 47.85-28.8 15.95-48 15.95zm320 0c-19.2 0-48 3.19-48-15.95S396.8 256 416 256s32 12.76 32 31.9-12.8 31.9-32 31.9z"></path>
-									</svg>
-									<!-- <i class="fas fa-car"></i> --> By Car
-								</h5>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.</p>
-								<h5 class="section-title">
-									<svg class="svg-inline--fa fa-train fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="train" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
-										<path fill="currentColor" d="M448 96v256c0 51.815-61.624 96-130.022 96l62.98 49.721C386.905 502.417 383.562 512 376 512H72c-7.578 0-10.892-9.594-4.957-14.279L130.022 448C61.82 448 0 403.954 0 352V96C0 42.981 64 0 128 0h192c65 0 128 42.981 128 96zm-48 136V120c0-13.255-10.745-24-24-24H72c-13.255 0-24 10.745-24 24v112c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24zm-176 64c-30.928 0-56 25.072-56 56s25.072 56 56 56 56-25.072 56-56-25.072-56-56-56z"></path>
-									</svg>
-									<!-- <i class="fas fa-train"></i> --> By Train
-								</h5>
-								<p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. </p>
-								<h5 class="section-title">
-									<svg class="svg-inline--fa fa-bus fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-										<path fill="currentColor" d="M488 128h-8V80c0-44.8-99.2-80-224-80S32 35.2 32 80v48h-8c-13.25 0-24 10.74-24 24v80c0 13.25 10.75 24 24 24h8v160c0 17.67 14.33 32 32 32v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h192v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h6.4c16 0 25.6-12.8 25.6-25.6V256h8c13.25 0 24-10.75 24-24v-80c0-13.26-10.75-24-24-24zM112 400c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm16-112c-17.67 0-32-14.33-32-32V128c0-17.67 14.33-32 32-32h256c17.67 0 32 14.33 32 32v128c0 17.67-14.33 32-32 32H128zm272 112c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"></path>
-									</svg>
-									<!-- <i class="fas fa-bus"></i> --> By Bus
-								</h5>
-								<p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+								<p>For the trip on January 4th from Ho Chi Minh city to Cái Mơn (Bến Tre), we will prepare 2 buses to pick you up at 2 locations:</p>
+								<div class="map-main-container col-md-6">
+									<span>From Intel Vietnam</span>
+									<div class="map-container embed-responsive" id="church-path-location"></div>
+								</div>
+								<div class="map-main-container col-md-6">
+									<span>From University of Natural Sciences</span>
+									<div class="map-container embed-responsive" id="church-path-location2"></div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id="facilities-modal" class="facilities-modal modal" tabindex="-1" role="dialog" aria-labelledby="facilitiesModalLabel">
-			<div class="modal-dialog" role="document">
+		<div id="thankyou-modal" class="modal modal-rsvp animated fadeIn" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel2" aria-modal="true">
+			<div class="modal-dialog" role="document" style="margin-top: 200px">
 				<div class="modal-content">
 					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-						<h4 class="modal-title text-center" id="facilitiesModalLabel">Facilities</h4>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							<div class="event-col col-12 col-md-6">
-								<h4 class="col-title text-center">Ceremony</h4>
-								<div class="col-subtitle script text-center">St. Paul's Church</div>
-								<ul class="list-unstyled facilities-list">
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Internet Access / WiFi
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Disabled Access
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Bathroom and baby changing
-										<br>
-										<span class="details">There is a disabled bathroom with nappy changing facilities.</span>
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Car Parking
-										<br>
-										<span class="details">There is a disabled bathroom with nappy changing facilities.</span>
-									</li>
-								</ul>
-							</div>
-							<!--//event-col-->
-							<div class="event-col col-12 col-md-6">
-								<h4 class="col-title text-center">Reception</h4>
-								<div class="col-subtitle script text-center">The Manor House</div>
-								<ul class="list-unstyled facilities-list">
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Wine Bar
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Internet Access / WiFi
-										<br>
-										<span class="details">Aenean commodo ligula eget dolor.</span>
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Disabled Access
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Bathroom and baby changing
-									</li>
-									<li>
-										<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-											<path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path>
-										</svg>
-										<!-- <i class="fas fa-check"></i> --> Car Parking
-										<br>
-										<span class="details">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes</span>
-									</li>
-								</ul>
-							</div>
-						</div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h2 id="rsvpModalLabel2" class="modal-title text-center">
+							<span class="title script display-block">
+								<span class="title-deco-left"></span>
+								<span class="title-text">Thank you :)</span>
+								<span class="title-deco-right"></span>
+							</span>
+						</h2>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		
 	</body>
 </html>

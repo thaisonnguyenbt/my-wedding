@@ -26,6 +26,7 @@ $(document).ready(function (){
         "menu-location-text" : "Địa Điểm",
         "menu-story-text" : "Chuyện Hai Đứa",
         "menu-gallery-text" : "Thư Viện Ảnh",
+        "menu-get-there-text" : "Di Chuyển",
         "menu-language-text" : "English",
         "btn-change-language" : "English",
         "the-wedding-text" : "Hôn Lễ",
@@ -34,20 +35,20 @@ $(document).ready(function (){
         "minutes-text" : "Phút",
         "seconds-text" : "Giây",
         "ceremony-text" : "Thánh Lễ Hôn Phối",
-        "ceremony-text-1" : "Thứ 7 - Ngày 4 tháng 1, 2020",
+        "ceremony-text-1" : "Thứ 7 - 04/01/2020",
         "ceremony-text-2" : "5 Giờ Sáng - 6 Giờ Sáng",
         "ceremony-text-3" : "Nhà Thờ Cái Mơn",
         "ceremony-description-text" : "Thánh lễ hôn phối sẽ được cử hành tại nhà thờ Cái Mơn vào lúc <strong>5 Giờ Sáng</strong>, <strong>04/01/2020</strong> (dương lịch). Sự hiện diện của quý khách cùng tham dự thánh lễ hôn phối là niềm vinh hạnh lớn cho đôi trẻ và gia đình chúng tôi.",
         "bride-wedding-text" : "Lễ Hỏi",
-        "bride-wedding-text-1" : "Thứ 7 - Ngày 4 tháng 1, 2020",
+        "bride-wedding-text-1" : "Thứ 7 - 04/01/2020",
         "bride-wedding-text-2" : "8 Giờ | 11 Giờ | 15 Giờ",
         "bride-wedding-text-3" : "Nhà Đàng Gái",
         "bride-wedding-description-text" : "Sau thánh lễ, tộc đàng trai sẽ đến nhà đàng gái trình sính lễ và cử hành nghi thức dạm hỏi truyền thống vào lúc <strong>8 Giờ Sáng</strong> trước trưởng bối hai họ, theo sau bởi 2 tiệc mừng vào lúc <strong>11 Giờ Sáng</strong> và <strong>3 Giờ Chiều</strong> cùng ngày",
         "groom-wedding-text" : "Lễ Cưới",
-        "groom-wedding-text-1" : "Chúa Nhật - 5 tháng 1, 2020",
+        "groom-wedding-text-1" : "Chúa Nhật - 05/01/2020",
         "groom-wedding-text-2" : "10 Giờ Sáng",
         "groom-wedding-text-3" : "Nhà Đàng Trai",
-        "wedding-description-text" : "Vào sáng Chúa Nhật, đoàn rước dâu sẽ đến nhà cô dâu vào lúc <strong>9 Giò Sáng</strong> và làm lễ xin phép rước dâu. Sau khi về đến nhà đàng trai và làm lễ ra mắt tổ tiên vào lúc <strong>10 Giờ Sáng</strong>, tiệc mừng cưới sẽ được cử hành sau đó.",
+        "wedding-description-text" : "Vào sáng Chúa Nhật, đoàn rước dâu sẽ đến nhà cô dâu vào lúc <strong>9 Giờ Sáng</strong> và làm lễ xin phép rước dâu. Sau khi về đến nhà đàng trai và làm <strong>lễ ra mắt tổ tiên</strong> vào lúc <strong>10 Giờ Sáng</strong>, tiệc mừng cưới được cử hành ngay sau đó.",
         "our-story-text" : "Chuyện Hai Đứa",
         "story-1-title" : "Đôi bạn chí cốt",
         "story-1-1" : "Tin buồn là không có love story kiểu tình yêu sét đánh cái đùng đâu nha ^^",
@@ -65,6 +66,7 @@ $(document).ready(function (){
         "menu-location-text" : "Location",
         "menu-story-text" : "Our Story",
         "menu-gallery-text" : "Gallery",
+        "menu-get-there-text" : "How to get there",
         "menu-language-text" : "Tiếng Việt",
         "btn-change-language" : "Tiếng Việt",
         "the-wedding-text" : "The Wedding",
@@ -132,7 +134,71 @@ $(document).ready(function (){
             return re.test(email);
         }
 
-        $(".btn-submit.btn-primary").click(function (event){
+        $(".btn-submit.btn-primary.btn-send-pickup").click(function (event){
+            var name = $("#dname").val().trim();
+            var phone = $("#dphone").val().trim();
+            var location = $("#dlocation").val();
+            var guests = $("#dguests").val();
+            var otherlocation = $("#dotherlocation").val();
+            var message = $("#dmessage").val().trim();
+            var isError = false;
+            if (!name) {
+                $("#dname").addClass("error");
+                isError = true;
+            } else {
+                $("#dname").removeClass("error");
+            }
+
+            if (!phone) {
+                isError = true;
+                $("#dphone").addClass("error");
+            } else {
+                $("#dphone").removeClass("error");
+            }
+
+            if (!location) {
+                isError = true;
+                $("#dlocation").addClass("error");
+            } else {
+                $("#dlocation").removeClass("error");
+            }
+
+            if (!guests) {
+                isError = true;
+                $("#dguests").addClass("error");
+            } else {
+                $("#dguests").removeClass("error");
+            }
+
+            if (isError) {
+                event.preventDefault();
+            } else {
+                var $form = $("#rsvp-form2");
+                $form.submit(function(){
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        data: $(this).serialize(),
+                        type: 'POST',
+                        success: function(result) {
+                            // Do something with the result
+                        }
+                    });
+                    return false;
+                });
+                $("#rsvp-modal2").modal("hide");
+                setTimeout(function() {
+                    $("#dname").val('');
+                    $("#dphone").val('');
+                    $("#dlocation").val('');
+                    $("#dotherlocation").val('');
+                    $("#dguests").val('');
+                    $("#dmessage").val('');
+                    $("#thankyou-modal").modal("show")
+                }, 500)
+            }
+        });
+
+        $(".btn-submit.btn-primary.btn-send-wish").click(function (event){
             var name = $("#cname").val().trim();
             var email = $("#cemail").val().trim();
             var message = $("#cmessage").val().trim();
@@ -172,9 +238,32 @@ $(document).ready(function (){
                     $("#cname").val('');
                     $("#cemail").val('');
                     $("#cmessage").val('');
+                    $("#thankyou-modal").modal("show")
                 }, 500)
             }
         });
+
+        $('#direction-modal').on('shown.bs.modal', (function() {
+            var mapIsAdded = false;
+          
+            return function() {
+                if (!mapIsAdded) {
+                    $('#church-path-location').html('<iframe src="https://www.google.com/maps/d/embed?mid=1SDTvfAduAQ_lI9mBO2F11jxQkWRIvI2u&hl=en"></iframe>');
+                    mapIsAdded = true;
+                }    
+            };
+        })());
+
+        $('#direction-modal').on('shown.bs.modal', (function() {
+            var mapIsAdded = false;
+          
+            return function() {
+                if (!mapIsAdded) {
+                    $('#church-path-location2').html('<iframe src="https://www.google.com/maps/d/embed?mid=1HA3f9X483eJaU8tWqKKUi1PpSO-NrAtg&hl=en"></iframe>');
+                    mapIsAdded = true;
+                }    
+            };
+        })());
     });
 
     jQuery(function ($) {
