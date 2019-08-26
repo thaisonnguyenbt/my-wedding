@@ -1,0 +1,25 @@
+import boto3
+import urllib.parse
+
+def lambda_handler(event, context):
+    emailMessage = ''
+    
+    payload = event
+    dynamodb = boto3.resource("dynamodb")
+    dynamoTable = dynamodb.Table("rsvp")
+    
+    payload['name'] = urllib.parse.unquote(payload['name'])
+    payload['phone'] = urllib.parse.unquote(payload['phone'])
+    payload['otherlocation'] = urllib.parse.unquote(payload['otherlocation'])
+    payload['message'] = urllib.parse.unquote(payload['message'])
+    
+    dynamoTable.put_item(Item=payload)
+
+    sns = boto3.client('sns')
+    emailMessage='Received RSVP Confirmation: \n \nName: ' + payload['name'] + '\nPhone: ' + payload['phone'] + '\nLocation: ' + payload['location'] + '\nOther Location: ' + payload['otherlocation'] + '\nMessage: ' + payload['message'] + '\nGuests: ' + payload['guests']
+    response = sns.publish(
+        TopicArn='arn:aws:sns:ap-southeast-1:794855339098:WeddingSNS',    
+        Message=emailMessage
+    )
+    
+    return {"code":200, "Message":"OK"}

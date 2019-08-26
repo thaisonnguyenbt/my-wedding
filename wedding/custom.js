@@ -102,7 +102,7 @@ $(document).ready(function (){
     }
 
     $(document).ready(function (){
-        $(".nav-link.scrollto").click(function (){
+        $(".nav-link.scrollto").one("click", function (){
             var hash = $(this).attr("scroll-position");
             var position = $("#" + hash).offset().top;
 
@@ -134,13 +134,13 @@ $(document).ready(function (){
             return re.test(email);
         }
 
-        $(".btn-submit.btn-primary.btn-send-pickup").click(function (event){
+        $(".btn-submit.btn-primary.btn-send-pickup").one("click", function (event){
             var name = $("#dname").val().trim();
             var phone = $("#dphone").val().trim();
             var location = $("#dlocation").val();
             var guests = $("#dguests").val();
-            var otherlocation = $("#dotherlocation").val();
-            var message = $("#dmessage").val().trim();
+            var otherlocation = $("#dotherlocation").val() ? $("#dotherlocation").val() : "-";
+            var message = $("#dmessage").val().trim() ? $("#dmessage").val().trim() : "-";
             var isError = false;
             if (!name) {
                 $("#dname").addClass("error");
@@ -173,6 +173,10 @@ $(document).ready(function (){
             if (isError) {
                 event.preventDefault();
             } else {
+                $("#dname").val(encodeURIComponent(name));
+                $("#dphone").val(encodeURIComponent(phone));
+                $("#dotherlocation").val(encodeURIComponent(otherlocation));
+                $("#dmessage").val(encodeURIComponent(message));
                 var $form = $("#rsvp-form2");
                 $form.submit(function(){
                     $.ajax({
@@ -187,21 +191,15 @@ $(document).ready(function (){
                 });
                 $("#rsvp-modal2").modal("hide");
                 setTimeout(function() {
-                    $("#dname").val('');
-                    $("#dphone").val('');
-                    $("#dlocation").val('');
-                    $("#dotherlocation").val('');
-                    $("#dguests").val('');
-                    $("#dmessage").val('');
                     $("#thankyou-modal").modal("show")
                 }, 500)
             }
         });
 
-        $(".btn-submit.btn-primary.btn-send-wish").click(function (event){
+        $(".btn-submit.btn-primary.btn-send-wish").one("click", function (event){
             var name = $("#cname").val().trim();
-            var email = $("#cemail").val().trim();
-            var message = $("#cmessage").val().trim();
+            var email = $("#cemail").val().trim() ? $("#cemail").val().trim() : "-";
+            var message = $("#cmessage").val().trim() ? $("#cmessage").val().trim() : "-";
             var isError = false;
             if (!name) {
                 $("#cname").addClass("error");
@@ -223,9 +221,13 @@ $(document).ready(function (){
             } else {
                 $("#cmessage").removeClass("error");
             }
+            
             if (isError) {
                 event.preventDefault();
             } else {
+                $("#cname").val(encodeURIComponent(name));
+                $("#dcemail").val(encodeURIComponent(email));
+                $("#cmessage").val(encodeURIComponent(message));
                 var $form = $("#rsvp-form");
                 $form.submit(function(){
                     $.post($(this).attr('action'), $(this).serialize(), function(response){
@@ -235,9 +237,6 @@ $(document).ready(function (){
                 });
                 $("#rsvp-modal").modal("hide");
                 setTimeout(function() {
-                    $("#cname").val('');
-                    $("#cemail").val('');
-                    $("#cmessage").val('');
                     $("#thankyou-modal").modal("show")
                 }, 500)
             }
@@ -264,6 +263,12 @@ $(document).ready(function (){
                 }    
             };
         })());
+
+        $('#thankyou-modal').on('hidden.bs.modal', function() {
+            window.location.reload();
+        });
+        
+        
     });
 
     jQuery(function ($) {
