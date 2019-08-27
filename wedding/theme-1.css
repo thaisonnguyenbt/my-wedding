@@ -973,11 +973,24 @@ label{
     .headline .swirl-left, .headline .swirl-right {
         display: none
     }
+
+    .message-inner {
+        padding-top: 100px;
+        padding: 0px;
+    }
+
+    .couple-profile {
+        bottom: -185px;
+    }
 }
 @media (min-width: 377px) and (max-width: 499px) {
     .story-section {
         background-position: 24%;
         padding-bottom: 10px;
+    }
+    .message-inner {
+        padding-top: 100px;
+        padding: 0px;
     }
 }
 
@@ -994,6 +1007,10 @@ label{
     }
     .direction-modal .modal-dialog, .modal-rsvp .modal-dialog {
         width:96%;
+    }
+
+    .message-inner {
+        padding-top: 100px;
     }
 }
 

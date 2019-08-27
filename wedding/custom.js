@@ -129,14 +129,22 @@ $(document).ready(function (){
             });
         });
 
-        function validateEmail(email) {
-            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(email);
+        function validateEmailOrPhone(str) {
+            if (str) {
+                if (isNaN(str)) {
+                    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(str);
+                } else if (str.length == 10) {
+                    return true;
+                }
+                return false;
+            }  
+            return false;
         }
 
-        $(".btn-submit.btn-primary.btn-send-pickup").one("click", function (event){
+        $(".btn-submit.btn-primary.btn-send-pickup").on("click", function (event){
             var name = $("#dname").val().trim();
-            var phone = $("#dphone").val().trim();
+            var emailOrPhone = $("#dphone").val().trim();
             var location = $("#dlocation").val();
             var guests = $("#dguests").val();
             var otherlocation = $("#dotherlocation").val() ? $("#dotherlocation").val() : "-";
@@ -149,7 +157,7 @@ $(document).ready(function (){
                 $("#dname").removeClass("error");
             }
 
-            if (!phone) {
+            if (!emailOrPhone || !validateEmailOrPhone(emailOrPhone)) {
                 isError = true;
                 $("#dphone").addClass("error");
             } else {
@@ -174,7 +182,7 @@ $(document).ready(function (){
                 event.preventDefault();
             } else {
                 $("#dname").val(encodeURIComponent(name));
-                $("#dphone").val(encodeURIComponent(phone));
+                $("#dphone").val(encodeURIComponent(emailOrPhone));
                 $("#dotherlocation").val(encodeURIComponent(otherlocation));
                 $("#dmessage").val(encodeURIComponent(message));
                 var $form = $("#rsvp-form2");
@@ -196,9 +204,9 @@ $(document).ready(function (){
             }
         });
 
-        $(".btn-submit.btn-primary.btn-send-wish").one("click", function (event){
+        $(".btn-submit.btn-primary.btn-send-wish").on("click", function (event){
             var name = $("#cname").val().trim();
-            var email = $("#cemail").val().trim() ? $("#cemail").val().trim() : "-";
+            var emailOrPhone = $("#cemail").val().trim() ? $("#cemail").val().trim() : "-";
             var message = $("#cmessage").val().trim() ? $("#cmessage").val().trim() : "-";
             var isError = false;
             if (!name) {
@@ -208,7 +216,7 @@ $(document).ready(function (){
                 $("#cname").removeClass("error");
             }
 
-            if (!email || !validateEmail(email)) {
+            if (!emailOrPhone || !validateEmailOrPhone(emailOrPhone)) {
                 isError = true;
                 $("#cemail").addClass("error");
             } else {
@@ -226,7 +234,7 @@ $(document).ready(function (){
                 event.preventDefault();
             } else {
                 $("#cname").val(encodeURIComponent(name));
-                $("#dcemail").val(encodeURIComponent(email));
+                $("#dcemail").val(encodeURIComponent(emailOrPhone));
                 $("#cmessage").val(encodeURIComponent(message));
                 var $form = $("#rsvp-form");
                 $form.submit(function(){
