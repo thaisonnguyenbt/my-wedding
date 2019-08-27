@@ -364,7 +364,7 @@ label{
     color:rgba(255,255,255,0.85);
     padding:30px;
     padding-top:25px;
-    padding-bottom:25px;
+    padding-bottom: 40px;
     height:960px;
     border-radius: 100px;
 }
@@ -372,11 +372,10 @@ label{
     font-size:36px;
     font-family: 'Meddon', cursive;
     color:gold;
-    /*background:transparent url("../images/ribbon-lime.svg") no-repeat center top;*/
     height:126px;
     padding-top:8px;
     font-weight:bold;
-    margin-bottom:15px;
+    margin-top:-30px;
     -webkit-opacity:.85;
     -moz-opacity:.85;
     opacity:.85;
@@ -386,8 +385,7 @@ label{
     cursor: pointer;
 }
 .headline .names{
-    font-size:68px;
-    margin-bottom:20px
+    font-size:100px;
 }
 .headline .statement{
     font-size:36px;
@@ -694,7 +692,7 @@ label{
 }
 .couple-profile{
     position:absolute;
-    bottom:-160px;
+    bottom:-180px;
     left:50%;
     margin-left:-163px;
     width:326px;
@@ -974,6 +972,10 @@ label{
     #rsvp-modal2 .modal-content .modal-body, #rsvp-modal .modal-content .modal-body {
         padding:30px 20px;
     }
+
+    .headline .names {
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -1127,7 +1129,8 @@ label{
     .hero-box{
         height:100%;
         padding-left:15px;
-        padding-right:15px
+        padding-right:15px;
+        padding-bottom: 40px;
     }
     .hero-box .date{
         font-size:36px;
