@@ -364,7 +364,7 @@ label{
     padding:30px;
     padding-top:25px;
     padding-bottom:25px;
-    height:960px;
+    /*height:960px;*/
     border-radius: 100px;
     display: table;
     width: 100%;
@@ -1454,4 +1454,150 @@ label{
     color:#fff;
     font-size:16px
 }
- 
+
+.thank-you.script {
+    font-size: 46px;
+    color: #f4af9c;
+}
+
+.signature.script {
+    font-size: 28px;
+    color: #786b67; 
+}
+
+#direction-modal.modal.show .modal-dialog {
+    width: 90%;
+}
+
+
+
+.green-theme a {
+    color:#367d90;
+}
+
+.green-theme a:hover, .green-theme a:active{
+    color: #367d90;
+}
+
+.green-theme a:focus{
+    color:#367d90;
+}
+
+.green-theme a.btn-primary.active:hover,
+.green-theme a.btn-primary.active:active,
+.green-theme a.btn-primary.active:focus,
+.green-theme .btn-primary.active:hover,
+.green-theme .btn-primary.active:active,
+.green-theme .btn-primary.active:focus{
+    background:#367d90;
+}
+
+.green-theme a.btn-primary:hover,
+.green-theme .btn-primary:hover{
+    background:#f19c85;
+    color: #212529;
+}
+
+.green-theme a.btn-primary:active,
+.green-theme .btn-primary:active{
+    background:#367d90;
+}
+
+.green-theme label{
+    color:#367d90
+}
+
+.green-theme .text-highlight{
+    color:#367d90
+}
+
+.green-theme #topcontrol{
+    background:#367d90;
+}
+
+.green-theme #topcontrol:hover{
+    background:#f7c2b3
+}
+
+.green-theme .navbar-toggler .toggle-title{
+    color:#367d90;
+}
+.green-theme .navbar-toggler .icon-bar{
+    background-color:#367d90;\
+}
+.green-theme .green-theme .nav>li.active>a{
+    color:#367d90
+}
+.green-theme .footer a{
+    color:#367d90
+}
+.green-theme .footer a:hover{
+    color:#367d90
+}
+
+.green-theme .wedding-section .love-icon{
+    color:#367d90;
+}
+
+.green-theme .countdown-box span.number{
+    color:#367d90;
+}
+
+.green-theme .blueimp-gallery>.close{
+    color:#367d90 !important
+}
+.green-theme .message-container .thank-you{
+    color:#367d90;
+}
+
+.green-theme .comments-section{
+    background:#367d90 url("../images/heart-pattern.png") repeat center top
+}
+
+.green-theme .modal .section-title{
+    color:#367d90;
+}
+
+.green-theme .modal .facilities-list li .svg-inline--fa{
+    color:#367d90;
+}
+
+.green-theme .header .nav>li>a.active{
+    color:#367d90
+}
+.green-theme .header .nav>li>a:focus,
+.green-theme .header .nav>li>a:hover{
+    color:#367d90
+}
+
+.green-theme .config-panel #color-options li.theme-1 a{
+    background:#367d90
+}
+
+.green-theme a.btn-primary, .green-theme .btn-primary {
+    background: #367d90;
+    color: #fff;
+}
+.green-theme .thank-you.script {
+    color: #367d90;
+}
+
+.green-theme .title-deco-left.random {
+    background: transparent url(../images/rose-left-green.svg) no-repeat left bottom;
+}
+
+.green-theme .title-deco-right.random {
+    background: transparent url(../images/rose-right-green.svg) no-repeat left bottom;
+}
+
+.green-theme .couple-profile{
+    background: transparent url("../images/heart-couple-green.png") no-repeat center center;
+    -webkit-background-size:contain;
+    -moz-background-size:contain;
+    -o-background-size:contain;
+    background-size:contain;
+}
+
+.green-theme .message-container{
+    background:transparent url("../images/frame-green.png") no-repeat center top;
+}

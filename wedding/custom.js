@@ -102,6 +102,26 @@ $(document).ready(function (){
     }
 
     $(document).ready(function (){
+
+        function getRandom() {
+            return Math.round(Math.random() * 99) + 1;
+        }
+
+        if (localStorage != undefined && typeof(localStorage.getItem) == "function") {
+            var sq = localStorage.getItem("sq");
+            console.log(sq);
+            if (sq && typeof(sq) == "string") {
+                sq = parseInt(sq);
+                if (sq % 2 == 1) {
+                    $("body").addClass("green-theme");
+                }
+                localStorage.setItem("sq", sq + 1);
+            } else {
+                localStorage.setItem("sq", 1);
+            }
+            
+        }
+        
         $(".nav-link.scrollto").one("click", function (){
             var hash = $(this).attr("scroll-position");
             var position = $("#" + hash).offset().top;
