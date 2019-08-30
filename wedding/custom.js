@@ -28,7 +28,8 @@ $(document).ready(function (){
         "menu-gallery-text" : "Thư Viện Ảnh",
         "menu-get-there-text" : "Di Chuyển",
         "menu-language-text" : "English",
-        "btn-change-language" : "English",
+        "btn-pickup-registration" : "Chọn Điểm Đón",
+        "btn-change-language" : "Change to English",
         "the-wedding-text" : "Hôn Lễ",
         "days-text" : "Ngày",
         "hours-text" : "Giờ",
@@ -53,12 +54,13 @@ $(document).ready(function (){
         "story-1-title" : "Đôi bạn chí cốt",
         "story-1-1" : "Tin buồn là không có love story kiểu tình yêu sét đánh cái đùng đâu nha ^^",
         "story-1-2" : "Tụi mình là bạn nối khố từ hồi cấp 3, cái thuở còn tuổi 15 trăng tròn ấy. Hai đứa cùng học, cùng chơi, cùng có nhiều kỉ niệm đẹp tuổi học trò hồn nhiên như chuối chiên cũng như bao đứa mới lớn khác.",
-        "story-1-3" : "Rồi mình phát hiện mình cảm nắng “bả” từ năm lớp 11 (T.T). Cái cảm giác ấy cứ lớn dần lên trong mình, cho đến lúc mình nhận ra thì hai đứa đã sắp tốt nghiệp rồi. Cũng thấy phục mình vì lúc đó cái tôi cũng lớn lắm nha, ôi mấy cái chuyện tình cảm vu vơ của con nít tuổi mới lớn ấy mà, haha. Thế rồi “gồng” hết nổi, đành viết thư củ chuối cho “bả” , nhưng cũng chỉ dám hứa hẹn cùng nhau cố gắng cho kì thi đại học sắp tới.",
-        "story-1-4" : "Không biết xui hay hên, tụi mình đỗ chung trường đại học, nhưng những năm tháng trên giảng đường cũng lặng lẽ trôi qua với những lo toan riêng của mỗi đứa về cuộc sống, về tương lai. Tụi mình có buổi hẹn đầu tiên khi mình có tháng lương đầu tiên ^^",
+        "story-1-3" : "Rồi mình phát hiện mình cảm nắng “bả” từ năm lớp 11 (T.T). Cái cảm giác ấy cứ lớn dần lên trong mình, cho đến lúc mình nhận ra thì hai đứa đã sắp tốt nghiệp rồi. Cũng thấy phục mình vì lúc đó cái tôi cũng lớn lắm nha, ôi mấy cái chuyện tình cảm vu vơ của con nít tuổi mới lớn ấy mà, haha. Thế rồi “gồng” hết nổi, đành viết thư củ chuối cho “bả” , nhưng cũng chỉ dám hứa hẹn cùng nhau cố gắng cho kì thi đại học sắp tới <img style=\"width: 30px\" src=\"./images/nerd.png\"/></p>",
+        "story-1-4" : "Không biết xui hay hên, tụi mình đỗ chung trường đại học, nhưng những năm tháng trên giảng đường cũng lặng lẽ trôi qua với những lo toan riêng của mỗi đứa về cuộc sống, về tương lai. Tụi mình có buổi hẹn đầu tiên khi mình có tháng lương đầu tiên <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
         "gallery-text" : "Thư Viện Ảnh",
         "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ờ quê và trường cũ của 2 đứa (^_^)",
         "save-the-date-text" : "Hoà Cùng Niềm Vui",
-        "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải giải quyết và dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất. Vì vậy..."
+        "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải chuẩn bị và cũng có rất nhiều thứ được ấp ủ, dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất với sự có mặt của tất cả mọi người. Nhưng vì hai đứa làm đám cuới quê, chịu giới hạn khá lớn về mặt di chuyển và cơ sở vật chất quê cũng như thời gian gấp rút gói gọn tất cả trong 2 ngày nên hai đứa không thể chuẩn bị đủ chu đáo cho các bạn ở quá xa. Hai đứa sẽ tìm cơ hội để báo hỷ cùng các bạn/anh chị ở một dịp khác thuận tiện hơn và có nhiều thời gian hơn. Dù thế nào đi nữa, món quà lớn nhất vẫn là được mọi người chia sẻ niềm vui này cùng với 2 đứa ^_^",
+        "thank-you-text-2" : "Thật hạnh phúc khi được cưới người mình yêu, và càng hạnh phúc hơn khi được cưới nhau trong sự yêu thương và chúc phúc của mọi người.",
     };
 
     var en = {
@@ -67,6 +69,7 @@ $(document).ready(function (){
         "menu-story-text" : "Our Story",
         "menu-gallery-text" : "Gallery",
         "menu-get-there-text" : "How to get there",
+        "btn-pickup-registration" : "Pickup Registration",
         "menu-language-text" : "Tiếng Việt",
         "btn-change-language" : "Chuyển Sang Tiếng Việt",
         "the-wedding-text" : "The Wedding",
@@ -98,7 +101,9 @@ $(document).ready(function (){
         "gallery-text" : "Gallery",
         "gallery-taken-text" : "Photos taken by <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh</a> in our hometown and in our high school (^_^)",
         "save-the-date-text" : "Share Our Happiness",
-        "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải giải quyết và dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất. Vì vậy...",
+        "thank-you-text" : "Organizing a wedding is really an unforgetable memory, there're too many things to prepare and many things we want to do. We're trying our best to fullfill our day with everyone because this can only happen once in a lifetime. But since our hometown is in the country side, far away from the city and has limitations on the facilities as well as transportations and we have to compress everything within 2 weekend days, we will find the opportunity to celebrate with you later if this is not convenient for you, when we have more time. However it is, the most important gift to us is to have you share our day ^_^",
+        "thank-you-text-2" : "It's so great to marry the truely love, and it's even more wonderful when we can get married with your congrats with us.",
+
     }
 
     $(document).ready(function (){
@@ -109,11 +114,12 @@ $(document).ready(function (){
 
         if (localStorage != undefined && typeof(localStorage.getItem) == "function") {
             var sq = localStorage.getItem("sq");
-            console.log(sq);
             if (sq && typeof(sq) == "string") {
                 sq = parseInt(sq);
-                if (sq % 2 == 1) {
+                if (sq % 10 < 5) {
                     $("body").addClass("green-theme");
+                } else {
+                    $("body").removeClass("green-theme");
                 }
                 localStorage.setItem("sq", sq + 1);
             } else {
