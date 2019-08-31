@@ -1470,6 +1470,23 @@ label{
 }
 
 
+.hero-section.bg-2 {
+    background: #262220 url(../wedding/pic-6.jpg) no-repeat 50% bottom;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-section.bg-2 .hero-box .headline.script {
+    position: absolute;
+    right: 100px;
+    color: #3d3552;
+    padding-top: 100px;
+}
+
+
+
+
+
 
 .green-theme a {
     color:#367d90;
@@ -1494,7 +1511,7 @@ label{
 
 .green-theme a.btn-primary:hover,
 .green-theme .btn-primary:hover{
-    background:#f19c85;
+    background:#38b1d2;
     color: #212529;
 }
 
@@ -1600,4 +1617,40 @@ label{
 
 .green-theme .message-container{
     background:transparent url("../images/frame-green.png") no-repeat center top;
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+    .hero-section.bg-2 .hero-box .headline.script {
+        right: -60px;
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 620px) {
+    .hero-section.bg-2 .hero-box .headline.script  {
+        right: 30px;
+    }
+    .hero-section.bg-2 {
+         background-position: 25%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-section.bg-2 .hero-box .headline.script {
+        right: 30px;
+    }
+
+    .hero-section.bg-2 .headline .hitched {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-section.bg-2 .hero-box .headline.script {
+        padding-top: 10px;
+    }
+
+    .hero-section.bg-2 {
+        background-position: 45%;
+    }
 }

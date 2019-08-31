@@ -19,6 +19,7 @@ $(document).ready(function (){
             
         }, 1000);
     }
+
     var currentLanguage = "en";
 
     var vi = {
@@ -119,7 +120,7 @@ $(document).ready(function (){
         "gallery-taken-text" : "Photos taken by <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh</a> in our hometown and in our high school (^_^)",
         "save-the-date-text" : "Share Our Happiness",
         "thank-you-text" : "Organizing a wedding is really an unforgetable memory, there're too many things to prepare and many things we want to do. We're trying our best to fullfill our day with everyone because this can only happen once in a lifetime. But since our hometown is in the country side, far away from the city and has limitations on the facilities as well as transportations and we have to compress everything within 2 weekend days, we will find the opportunity to celebrate with you later if this is not convenient for you, when we have more time. However it is, the most important gift to us is to have you share our day ^_^",
-        "thank-you-text-2" : "It's so great to marry the truely love, and it's even more wonderful when we can get married with your congrats with us.",
+        "thank-you-text-2" : "It's so great to marry my true love, and it's even more wonderful when we can get married with your congrats with us.",
         "send-message-text" : "Send Us A Message",
         "send-private-mesage-text" : "Send Private Message",
         "tell-though-text" : "Please tell us your thought ^_^",
@@ -143,6 +144,10 @@ $(document).ready(function (){
 
         function getRandom() {
             return Math.round(Math.random() * 99) + 1;
+        }
+        var rd = getRandom();
+        if (rd >= 0 && rd < 10) {
+            $("#hero").addClass("bg-2");
         }
 
         if (localStorage != undefined && typeof(localStorage.getItem) == "function") {
@@ -334,8 +339,6 @@ $(document).ready(function (){
         $('#thankyou-modal').on('hidden.bs.modal', function() {
             window.location.reload();
         });
-        
-        
     });
 
     jQuery(function ($) {
