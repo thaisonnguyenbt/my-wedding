@@ -61,6 +61,23 @@ $(document).ready(function (){
         "save-the-date-text" : "Hoà Cùng Niềm Vui",
         "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải chuẩn bị và cũng có rất nhiều thứ được ấp ủ, dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất với sự có mặt của tất cả mọi người. Nhưng vì hai đứa làm đám cuới quê, chịu giới hạn khá lớn về mặt di chuyển và cơ sở vật chất quê cũng như thời gian gấp rút gói gọn tất cả trong 2 ngày nên hai đứa không thể chuẩn bị đủ chu đáo cho các bạn ở quá xa. Hai đứa sẽ tìm cơ hội để báo hỷ cùng các bạn/anh chị ở một dịp khác thuận tiện hơn và có nhiều thời gian hơn. Dù thế nào đi nữa, món quà lớn nhất vẫn là được mọi người chia sẻ niềm vui này cùng với 2 đứa ^_^",
         "thank-you-text-2" : "Thật hạnh phúc khi được cưới người mình yêu, và càng hạnh phúc hơn khi được cưới nhau trong sự yêu thương và chúc phúc của mọi người.",
+        "send-message-text" : "Gởi Tin Nhắn",
+        "send-private-mesage-text" : "Gởi Tin Nhắn Riêng",
+        "tell-though-text" : "Xin bạn cho ý kiến ^_^",
+        "send-private-mesage-name" : "Tên tui hay gọi bạn",
+        "send-private-mesage-email" : "Email hoặc số điện thoại",
+        "send-private-mesage-mesage" : "Nội dung",
+        "send-private-mesage-submit" : "Gởi",
+        "pickup-header-text" : "Chọn Điểm Đón",
+        "pickup-desc-text" : "Nếu bạn đi từ Sài Gòn vào sáng ngày 4/1, xin hãy chọn điểm xe rước theo các options bên dưới để được chuẩn bị tốt hơn. Nếu bạn muốn lên xe tại 1 điểm dọc trên lộ trình, xin hãy ghi địa chỉ vào ô \"Điểm Đón Khác\"",
+        "pickup-name" : "Tên tui hay gọi bạn",
+        "pickup-email" : "Email hoặc số điện thoại",
+        "pickup-bus" : "Bạn muốn đi xe nào ?",
+        "pickup-seat" : "Bạn cần bao nhiêu ghế ?",
+        "pickup-other-location" : "Điểm đón khác trên đường",
+        "pickup-message" : "Lời nhắn thêm",
+        "pickup-submit" : "Gởi",
+        "pickup-early" : "Nếu bạn dự lễ cưới ở nhà thờ vào sáng 4/1, xin hãy gởi tin nhắn riêng. Xe xuất hành vào chiều thứ 6."
     };
 
     var en = {
@@ -103,7 +120,23 @@ $(document).ready(function (){
         "save-the-date-text" : "Share Our Happiness",
         "thank-you-text" : "Organizing a wedding is really an unforgetable memory, there're too many things to prepare and many things we want to do. We're trying our best to fullfill our day with everyone because this can only happen once in a lifetime. But since our hometown is in the country side, far away from the city and has limitations on the facilities as well as transportations and we have to compress everything within 2 weekend days, we will find the opportunity to celebrate with you later if this is not convenient for you, when we have more time. However it is, the most important gift to us is to have you share our day ^_^",
         "thank-you-text-2" : "It's so great to marry the truely love, and it's even more wonderful when we can get married with your congrats with us.",
-
+        "send-message-text" : "Send Us A Message",
+        "send-private-mesage-text" : "Send Private Message",
+        "tell-though-text" : "Please tell us your thought ^_^",
+        "send-private-mesage-name" : "Your preferred name",
+        "send-private-mesage-email" : "Email or Phone",
+        "send-private-mesage-mesage" : "Your message",
+        "send-private-mesage-submit" : "Submit",
+        "pickup-header-text" : "Pickup Selection",
+        "pickup-desc-text" : "If you're joining the trip from HCM City on Jan 4th, please help to confirm your preferred pickup location in the options below for better preparation. If you want to pickup you on the way, please specify the addess in the &quot;Other Location&quot;.",
+        "pickup-name" : "Your preferred name",
+        "pickup-email" : "Email or Phone",
+        "pickup-bus" : "Which bus do you prefer?",
+        "pickup-seat" : "How many seats do you need?",
+        "pickup-other-location" : "Other preferred location on the way",
+        "pickup-message" : "Additional message",
+        "pickup-submit" : "Submit",
+        "pickup-early" : "If you want to join us on the wedding ceremony in early morning Jan 4th, please drop us a message. The car will depart in Fiday's afternoon."
     }
 
     $(document).ready(function (){
