@@ -109,7 +109,7 @@ $(document).ready(function (){
         "ceremony-text-2" : "5:00am - 6:00am",
         "ceremony-text-3" : "Cái Mơn Church",
         "ceremony-description-text" : "We are getting married at Cái Mơn Church. Please come to share the joy with us at <strong>5am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.",
-        "bride-wedding-text" : "Betrothal Rituals",
+        "bride-wedding-text" : "Betrothal",
         "bride-wedding-text-1" : "Saturday - 04/01/2020",
         "bride-wedding-text-2" : "8:00am | 11:00am | 3:00pm",
         "bride-wedding-text-3" : "Bride's House",
