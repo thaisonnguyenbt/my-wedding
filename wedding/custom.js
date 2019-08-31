@@ -78,7 +78,16 @@ $(document).ready(function (){
         "pickup-other-location" : "Điểm đón khác trên đường",
         "pickup-message" : "Lời nhắn thêm",
         "pickup-submit" : "Gởi",
-        "pickup-early" : "Nếu bạn dự lễ cưới ở nhà thờ vào sáng 4/1, xin hãy gởi tin nhắn riêng. Xe xuất hành vào chiều thứ 6."
+        "pickup-early" : "Nếu bạn dự lễ cưới ở nhà thờ vào sáng 4/1, xin hãy gởi tin nhắn riêng. Xe xuất hành vào chiều thứ 6.",
+        "directionModalLabel" : "Chi Tiết Di Chuyển",
+        "direction-church" : "Địa Điểm Hôn Lễ",
+        "direction-church-name" : "Nhà Thờ Cái Mơn",
+        "direction-prepare" : "Xe được chuẩn bị",
+        "direction-desc-1" : "Vào sáng thứ 7 ngày 4 tháng 1, Tụi em sẽ chuẩn bị 2 xe rước từ Sài Gòn về Cái Mơn ở 2 địa điểm sau:",
+        "direction-intel" : "Từ Cty Intel Product",
+        "direction-uni" : "Từ Đại Học Khoa Học Tự Nhiên Q5",
+        "direction-self" : "Xe Tự Đi",
+        "direction-self-desc" : "Nếu bạn muốn tự di chuyển, có 2 nhà xe có chuyến về Cái Mơn mỗi giờ như sau:",
     };
 
     var en = {
@@ -137,7 +146,16 @@ $(document).ready(function (){
         "pickup-other-location" : "Other preferred location on the way",
         "pickup-message" : "Additional message",
         "pickup-submit" : "Submit",
-        "pickup-early" : "If you want to join us on the wedding ceremony in early morning Jan 4th, please drop us a message. The car will depart in Fiday's afternoon."
+        "pickup-early" : "If you want to join us on the wedding ceremony in early morning Jan 4th, please drop us a message. The car will depart in Fiday's afternoon.",
+        "directionModalLabel" : "CHow to get to our village",
+        "direction-church" : "Church Ceremony",
+        "direction-church-name" : "Cái Mơn Church",
+        "direction-prepare" : "Our prepared trip",
+        "direction-desc-1" : "For the trip on January 4th from Ho Chi Minh city to Cái Mơn (Bến Tre), we will prepare 2 buses to pick you up at 2 locations below:",
+        "direction-intel" : "From Intel Product Q9",
+        "direction-uni" : "From University of Natural Sciences Q5",
+        "direction-self" : "Travel by yourself",
+        "direction-self-desc" : "If you want to go by your own, there're 2 more bus services which have trips every hour, please refer to the info below:",
     }
 
     $(document).ready(function (){
@@ -190,6 +208,7 @@ $(document).ready(function (){
 
             $.each(language, function(key, value) {
                 $("#" + key).html(value);
+                console.log(key + " - " + value)
             });
         });
 
@@ -331,6 +350,28 @@ $(document).ready(function (){
             return function() {
                 if (!mapIsAdded) {
                     $('#church-path-location2').html('<iframe src="https://www.google.com/maps/d/embed?mid=1HA3f9X483eJaU8tWqKKUi1PpSO-NrAtg&hl=en"></iframe>');
+                    mapIsAdded = true;
+                }    
+            };
+        })());
+
+        $('#direction-modal').on('shown.bs.modal', (function() {
+            var mapIsAdded = false;
+          
+            return function() {
+                if (!mapIsAdded) {
+                    $('#bien-viet-xanh').html('<iframe src="https://www.google.com/maps/d/embed?mid=1uxAw8elmL8yDwOHkJSRiWzpAL8sGZ9Pr"></iframe>');
+                    mapIsAdded = true;
+                }    
+            };
+        })());
+
+        $('#direction-modal').on('shown.bs.modal', (function() {
+            var mapIsAdded = false;
+          
+            return function() {
+                if (!mapIsAdded) {
+                    $('#dai-ngan').html('<iframe src="https://www.google.com/maps/d/embed?mid=1qsv9QAqL1Z0nCyq9Pjko3B825xaYNbMo"></iframe>');
                     mapIsAdded = true;
                 }    
             };

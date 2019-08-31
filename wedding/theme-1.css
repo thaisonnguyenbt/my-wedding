@@ -1482,7 +1482,12 @@ label{
     color: #3d3552;
     padding-top: 100px;
 }
-
+.map-main-container h5 {
+    text-align: center;
+}
+.map-main-container h6 {
+    text-align: center;
+}
 
 
 
