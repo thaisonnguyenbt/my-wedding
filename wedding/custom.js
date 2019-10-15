@@ -63,7 +63,7 @@ $(document).ready(function (){
         "story-2-1" : "&quot;Đừng ngừng trao đi yêu thương. Hãy cứ mỉm cười bình thản.&quot;",
         "story-2-2" : "Từ buổi ban đầu, tính cách hai đứa cũng rất khác nhau. Nàng thì sống năng động còn chàng thì hơi tự kỷ, nàng thích hoạt động hội nhóm còn chàng thích ở một mình, nàng sống có nhiều quy tắc còn chàng thì hay bất chấp :))..... Và hai đứa cũng mất khá nhiều năm để chơi trò chơi sắp xếp lại những mảnh tính cách riêng biệt đó, một trò chơi cần rất nhiều yêu thương và kiên nhẫn.",
         "story-2-3" : "Đối với hai đứa, cuộc sống quả không suôn sẻ như một giấc mơ mà như một chuyến du hành. Cũng giống như khi bạn vẽ nên 1 trái tim, luôn sẽ xuất phát từ 1 điểm nhưng rồi nét vẽ sẽ đi về 2 hướng và tìm thấy nhau ở 1 điểm hẹn để tạo thành hình của tình yêu. Tụi mình đi qua tuổi trẻ đầy kêu hãnh và cùng với khát khao được khám phá thế giới và thử thách bản thân và cũng là thử thách tình cảm của 2 đứa. Nàng thì đi du học, chàng thì tìm 1 công việc ở nước ngoài, mỗi người 1 hướng đi riêng, một con đường để khẳng định bản thân. Ờ thì cũng chỉ là chu du đây đó thôi mà cũng mất hơn 10 năm để 2 đứa học được bài học về sự trân trọng 1 nửa yêu thương trong cuộc đời mình.",
-        "story-2-4" : "Thương 'bả' đâu có dễ, thiệt sự là không dễ <img style=\"width: 30px\" src=\"./images/shy.png\"/>",
+        "story-2-4" : "&quot;Thương 'bả' đâu có dễ, thiệt sự là hỏng có dễ&quot; <img style=\"width: 30px\" src=\"./images/shy.png\"/>",
         "gallery-text" : "Thư Viện Ảnh",
         "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ờ quê và trường cũ của 2 đứa (^_^)",
         "save-the-date-text" : "Hoà Cùng Niềm Vui",
@@ -136,7 +136,7 @@ $(document).ready(function (){
         "story-2-1" : "&quot;Don’t stop giving love even when you don’t receive it. Keep a smile and have patience.&quot;",
         "story-2-2" : "We’re too different in the beginning. She's very active but I'm kind of introverted, she enjoys community life but I like to be alone, she has many rules but I always like to against the rules :))..... And it took us years to play the puzzle game of matching to each other, the game which required tons of love and patience.",
         "story-2-3" : "To us, life is not a dream, it’s a journey with many challenges. Our love is just like drawing a heart shape by 2 brushstrokes, it could start from same point but follow its own direction and meet at a destination point to form the shape of love. We were young and we were about wanted to discover the world. To ‘her’, it was a chance to study abroad, and to me, it’s seeking career and opportunity oversea. It was just a little journey but took us dozen years of life to learn about love and respection.",
-        "story-2-4" : "It’s not easy to love her, not at all <img style=\"width: 30px\" src=\"./images/shy.png\"/>",
+        "story-2-4" : "&quot;It’s not easy to love her, not easy at all&quot; <img style=\"width: 30px\" src=\"./images/shy.png\"/>",
         "gallery-text" : "Gallery",
         "gallery-taken-text" : "Photos taken by <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh</a> in our hometown and in our high school (^_^)",
         "save-the-date-text" : "Share Our Happiness",
@@ -171,29 +171,21 @@ $(document).ready(function (){
     }
 
     $(document).ready(function (){
-
-        function getRandom() {
-            return Math.round(Math.random() * 99) + 1;
-        }
-        var rd = getRandom();
-        if (rd >= 0 && rd < 10) {
-            $("#hero").addClass("bg-2");
-        }
-
         if (localStorage != undefined && typeof(localStorage.getItem) == "function") {
             var sq = localStorage.getItem("sq");
             if (sq && typeof(sq) == "string") {
                 sq = parseInt(sq);
-                if (sq % 10 < 5) {
+                if (sq % 2 == 0) {
                     $("body").addClass("green-theme");
+                    $("#hero").addClass("bg-2");
                 } else {
                     $("body").removeClass("green-theme");
+                    $("#hero").removeClass("bg-2");
                 }
                 localStorage.setItem("sq", sq + 1);
             } else {
                 localStorage.setItem("sq", 1);
             }
-            
         }
         
         $(".nav-link.scrollto").one("click", function (){
