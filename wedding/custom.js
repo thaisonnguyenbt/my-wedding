@@ -3,19 +3,21 @@ $(document).ready(function (){
         setInterval(function () {
 
             var diff = new Date(time).getTime() - new Date().getTime();
-            if (diff > 0) {
-                var seconds = parseInt(diff / 1000);
-                var days = parseInt(seconds / 60 / 60 / 24);
-                var hours = parseInt(seconds / 60 / 60) - (days * 24);
-                var minutes = parseInt(seconds / 60) % 60;
-                seconds = seconds % 60;
-
-                $(element).find(".days .number").html(days);
-                $(element).find(".hours .number").html(hours);
-                $(element).find(".minutes .number").html(minutes);
-                $(element).find(".secs .number").html(seconds);
-                $(element).fadeIn();
+            if (diff < 0) {
+                diff = -diff;
             }
+            var seconds = parseInt(diff / 1000);
+            var days = parseInt(seconds / 60 / 60 / 24);
+            var hours = parseInt(seconds / 60 / 60) - (days * 24);
+            var minutes = parseInt(seconds / 60) % 60;
+            seconds = seconds % 60;
+
+            $(element).find(".days .number").html(days);
+            $(element).find(".hours .number").html(hours);
+            $(element).find(".minutes .number").html(minutes);
+            $(element).find(".secs .number").html(seconds);
+            $(element).fadeIn();
+            
             
         }, 1000);
     }
@@ -57,6 +59,11 @@ $(document).ready(function (){
         "story-1-2" : "Tụi mình là bạn nối khố từ hồi cấp 3, cái thuở còn tuổi 15 trăng tròn ấy. Hai đứa cùng học, cùng chơi, cùng có nhiều kỉ niệm đẹp tuổi học trò hồn nhiên như chuối chiên cũng như bao đứa mới lớn khác.",
         "story-1-3" : "Rồi mình phát hiện mình cảm nắng “bả” từ năm lớp 11 (T.T). Cái cảm giác ấy cứ lớn dần lên trong mình, cho đến lúc mình nhận ra thì hai đứa đã sắp tốt nghiệp rồi. Cũng thấy phục mình vì lúc đó cái tôi cũng lớn lắm nha, ôi mấy cái chuyện tình cảm vu vơ của con nít tuổi mới lớn ấy mà, haha. Thế rồi “gồng” hết nổi, đành viết thư củ chuối cho “bả” , nhưng cũng chỉ dám hứa hẹn cùng nhau cố gắng cho kì thi đại học sắp tới <img style=\"width: 30px\" src=\"./images/nerd.png\"/></p>",
         "story-1-4" : "Không biết xui hay hên, tụi mình đỗ chung trường đại học, nhưng những năm tháng trên giảng đường cũng lặng lẽ trôi qua với những lo toan riêng của mỗi đứa về cuộc sống, về tương lai. Tụi mình có buổi hẹn đầu tiên khi mình có tháng lương đầu tiên <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
+        "story-2-title" : "Hai đứa iu nhau",
+        "story-2-1" : "&quot;Đừng ngừng trao đi yêu thương. Hãy cứ mỉm cười bình thản.&quot;",
+        "story-2-2" : "Từ buổi ban đầu, tính cách hai đứa cũng rất khác nhau. Nàng thì sống năng động còn chàng thì hơi tự kỷ, nàng thích hoạt động hội nhóm còn chàng thích ở một mình, nàng sống có nhiều quy tắc còn chàng thì hay bất chấp :))..... Và hai đứa cũng mất khá nhiều năm để chơi trò chơi sắp xếp lại những mảnh tính cách riêng biệt đó, một trò chơi cần rất nhiều yêu thương và kiên nhẫn.",
+        "story-2-3" : "Đối với hai đứa, cuộc sống quả không suôn sẻ như một giấc mơ mà như một chuyến du hành. Cũng giống như khi bạn vẽ nên 1 trái tim, luôn sẽ xuất phát từ 1 điểm nhưng rồi nét vẽ sẽ đi về 2 hướng và tìm thấy nhau ở 1 điểm hẹn để tạo thành hình của tình yêu. Tụi mình đi qua tuổi trẻ đầy kêu hãnh và cùng với khát khao được khám phá thế giới và thử thách bản thân và cũng là thử thách tình cảm của 2 đứa. Nàng thì đi du học, chàng thì tìm 1 công việc ở nước ngoài, mỗi người 1 hướng đi riêng, một con đường để khẳng định bản thân. Ờ thì cũng chỉ là chu du đây đó thôi mà cũng mất hơn 10 năm để 2 đứa học được bài học về sự trân trọng 1 nửa yêu thương trong cuộc đời mình.",
+        "story-2-4" : "Thương 'bả' đâu có dễ, thiệt sự là không dễ <img style=\"width: 30px\" src=\"./images/shy.png\"/>",
         "gallery-text" : "Thư Viện Ảnh",
         "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ờ quê và trường cũ của 2 đứa (^_^)",
         "save-the-date-text" : "Hoà Cùng Niềm Vui",
@@ -122,9 +129,14 @@ $(document).ready(function (){
         "our-story-text" : "Our Story",
         "story-1-title" : "We're best friends",
         "story-1-1" : "It isn't a love from the first sight.",
-        "story-1-2" : "We started as friends in a same class in high school in 2005, when we were 15. We studied, played and laugh together as friends, sometimes we shared the earphone of the ipod borrowed from another friend and enjoyed the music together in the time break, but actually, I was there... not for the music :))",
+        "story-1-2" : "We started as friends in a same class in high school in 2005, when we were 15. We studied, played and laugh together as friends, sometimes we shared the earphone of the ipod borrowed from another friend and enjoyed the music and peaceful moment together in the time break.",
         "story-1-3" : "In the second year of high shool, I found myself had a crush on her. I didn't notice that \"weird\" feeling kept growing up inside me until I realized I might cannot be by her side anymore. There're many \"teenagers\" things happened that we couldn't handle and I thought it's just a feeling of youth and wouldn't last for long. I wrote her a letter, saying that I will focus on the university exam in next year instead and take it as a test for ourselves. She's the main reason made me study so hard for the university <img style='width: 30px' src='./images/nerd.png'/>",
         "story-1-4" : "After the exam in 2008, we managed to get into the same university in Ho Chi Minh city. But because I am a pessimistic person, during those 4 years of university, I still kept worrying too much about the future and my family's financial problems. Until I found my first job and could earn the money on my own in 2012, we had our first date <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
+        "story-2-title" : "We're in love",
+        "story-2-1" : "&quot;Don’t stop giving love even when you don’t receive it. Keep a smile and have patience.&quot;",
+        "story-2-2" : "We’re too different in the beginning. She's very active but I'm kind of introverted, she enjoys community life but I like to be alone, she has many rules but I always like to against the rules :))..... And it took us years to play the puzzle game of matching to each other, the game which required tons of love and patience.",
+        "story-2-3" : "To us, life is not a dream, it’s a journey with many challenges. Our love is just like drawing a heart shape by 2 brushstrokes, it could start from same point but follow its own direction and meet at a destination point to form the shape of love. We were young and we were about wanted to discover the world. To ‘her’, it was a chance to study abroad, and to me, it’s seeking career and opportunity oversea. It was just a little journey but took us dozen years of life to learn about love and respection.",
+        "story-2-4" : "It’s not easy to love her, not at all <img style=\"width: 30px\" src=\"./images/shy.png\"/>",
         "gallery-text" : "Gallery",
         "gallery-taken-text" : "Photos taken by <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh</a> in our hometown and in our high school (^_^)",
         "save-the-date-text" : "Share Our Happiness",
@@ -383,6 +395,6 @@ $(document).ready(function (){
     });
 
     jQuery(function ($) {
-        startTimer("2020-01-04T05:00:00", $("#church-countdown-box"));
+        startTimer("2020-01-03T22:00:00.000Z", $("#church-countdown-box"));
     });
 });
