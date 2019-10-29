@@ -399,4 +399,14 @@ $(document).ready(function (){
     jQuery(function ($) {
         startTimer("2020-01-03T22:00:00.000Z", $("#church-countdown-box"));
     });
+
+    var $container = $('#photos-wrapper');
+    
+    // init
+    $container.imagesLoaded(function () {
+        $container.packery({
+            itemSelector: '.item',
+            percentPosition: true
+        });
+    });
 });
