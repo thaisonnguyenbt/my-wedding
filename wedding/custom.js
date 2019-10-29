@@ -70,7 +70,7 @@ $(document).ready(function (){
         "story-3-3" : "Và sau tất cả mọi thứ, hai đứa mình rất vui và muốn nói cho cả thế giới biết rằng hai đứa mình sẽ chính thức kết thành vợ chồng vào <strong>ngày 4 tháng 1 năm 2020</strong> tới. <img style=\"width: 30px\" src=\"./images/happy-2.png\"/> ",
         "story-3-4" : "Xin mọi người hãy đến dự buổi lễ kết hôn của hai đứa mình vào lúc <strong>5 giờ sáng</strong> để chứng giám cho giây phút hai đứa mình trao nhau lời tuyên thệ gắn kết với nhau trước thiên Chúa và bắt đầu vào 1 chuyến hành trình mới, hành trình xây dựng gia đình của hai đứa sau này. <img style=\"width: 30px\" src=\"./images/happy-4.png\"/> ",
         "gallery-text" : "Thư Viện Ảnh",
-        "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ờ quê và trường cũ của 2 đứa (^_^)",
+        "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của bạn nhậu <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ở quê và trường cũ của 2 đứa (^_^)",
         "save-the-date-text" : "Hoà Cùng Niềm Vui",
         "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải chuẩn bị và cũng có rất nhiều thứ được ấp ủ, dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất với sự có mặt của tất cả mọi người. Nhưng vì hai đứa làm đám cuới quê, chịu giới hạn khá lớn về mặt di chuyển và cơ sở vật chất quê cũng như thời gian gấp rút gói gọn tất cả trong 2 ngày nên hai đứa không thể chuẩn bị đủ chu đáo cho các bạn ở quá xa. Hai đứa sẽ tìm cơ hội để báo hỷ cùng các bạn/anh chị ở một dịp khác thuận tiện hơn và có nhiều thời gian hơn. Dù thế nào đi nữa, món quà lớn nhất vẫn là được mọi người chia sẻ niềm vui này cùng với 2 đứa ^_^",
         "thank-you-text-2" : "Thật hạnh phúc khi được cưới người mình yêu, và càng hạnh phúc hơn khi được cưới nhau trong sự yêu thương và chúc phúc của mọi người.",
@@ -100,6 +100,8 @@ $(document).ready(function (){
         "direction-uni" : "Từ Đại Học Khoa Học Tự Nhiên Q5",
         "direction-self" : "Xe Tự Đi",
         "direction-self-desc" : "Nếu bạn muốn tự di chuyển, có 2 nhà xe có chuyến về Cái Mơn mỗi giờ như sau:",
+        "say-cool" : "Nói gì cho ngầu nào",
+        "for-my-love" : "Made this for my only love ^_^"
     };
 
     var en = {
@@ -178,6 +180,8 @@ $(document).ready(function (){
         "direction-uni" : "From University of Natural Sciences Q5",
         "direction-self" : "Travel by yourself",
         "direction-self-desc" : "If you want to go by your own, there're 2 more bus services which have trips every hour, please refer to the info below:",
+        "say-cool" : "Let's say something cool",
+        "for-my-love" : "Viết tặng vợ iu ^_^"
     }
 
     $(document).ready(function (){
