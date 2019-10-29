@@ -40,7 +40,7 @@ $(document).ready(function (){
         "seconds-text" : "Giây",
         "ceremony-text" : "Thánh Lễ Hôn Phối",
         "ceremony-text-1" : "Thứ 7 - 04/01/2020",
-        "ceremony-text-2" : "5 Giờ Sáng - 6 Giờ Sáng",
+        "ceremony-text-2" : "5 Giờ Sáng",
         "ceremony-text-3" : "Nhà Thờ Cái Mơn",
         "ceremony-description-text" : "Thánh lễ hôn phối sẽ được cử hành tại nhà thờ Cái Mơn vào lúc <strong>5 Giờ Sáng</strong>, <strong>04/01/2020</strong> (dương lịch). Sự hiện diện của quý khách cùng tham dự thánh lễ hôn phối là niềm vinh hạnh lớn cho đôi trẻ và gia đình chúng tôi.",
         "bride-wedding-text" : "Lễ Hỏi",
@@ -58,7 +58,7 @@ $(document).ready(function (){
         "story-1-1" : "Tin buồn là không có love story kiểu tình yêu sét đánh cái đùng đâu nha ^^",
         "story-1-2" : "Tụi mình là bạn nối khố từ hồi cấp 3, cái thuở còn tuổi 15 trăng tròn ấy. Hai đứa cùng học, cùng chơi, cùng có nhiều kỉ niệm đẹp tuổi học trò hồn nhiên như chuối chiên cũng như bao đứa mới lớn khác.",
         "story-1-3" : "Rồi mình phát hiện mình cảm nắng “bả” từ năm lớp 11 (T.T). Cái cảm giác ấy cứ lớn dần lên trong mình, cho đến lúc mình nhận ra thì hai đứa đã sắp tốt nghiệp rồi. Cũng thấy phục mình vì lúc đó cái tôi cũng lớn lắm nha, ôi mấy cái chuyện tình cảm vu vơ của con nít tuổi mới lớn ấy mà, haha. Thế rồi “gồng” hết nổi, đành viết thư củ chuối cho “bả” , nhưng cũng chỉ dám hứa hẹn cùng nhau cố gắng cho kì thi đại học sắp tới <img style=\"width: 30px\" src=\"./images/nerd.png\"/></p>",
-        "story-1-4" : "Không biết xui hay hên, tụi mình đỗ chung trường đại học, nhưng những năm tháng trên giảng đường cũng lặng lẽ trôi qua với những lo toan riêng của mỗi đứa về cuộc sống, về tương lai. Tụi mình có buổi hẹn đầu tiên khi mình có tháng lương đầu tiên <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
+        "story-1-4" : "Không biết xui hay hên, tụi mình đỗ chung trường đại học, nhưng những năm tháng trên giảng đường cũng lặng lẽ trôi qua với những lo toan riêng của mỗi đứa về cuộc sống, về tương lai. Tụi mình có buổi hẹn đầu khi mình có tháng lương đầu tiên <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
         "story-2-title" : "Hai đứa 'iu' nhau",
         "story-2-1" : "&quot;Đừng ngừng trao đi yêu thương. Hãy cứ mỉm cười bình thản.&quot;",
         "story-2-2" : "Từ buổi ban đầu, tính cách hai đứa cũng rất khác nhau. Nàng thì sống năng động còn chàng thì hơi tự kỷ, nàng thích hoạt động hội nhóm còn chàng thích ở một mình, nàng sống có nhiều quy tắc còn chàng thì hay bất chấp :))..... Và hai đứa cũng mất khá nhiều năm để chơi trò chơi sắp xếp lại những mảnh tính cách riêng biệt đó, một trò chơi cần rất nhiều yêu thương và kiên nhẫn.",
@@ -72,8 +72,8 @@ $(document).ready(function (){
         "gallery-text" : "Thư Viện Ảnh",
         "gallery-taken-text" : "Bộ ảnh &quot;cây nhà lá vườn&quot; dưới sự giúp đỡ của bạn nhậu <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh Photographer</a> ở quê và trường cũ của 2 đứa (^_^)",
         "save-the-date-text" : "Hoà Cùng Niềm Vui",
-        "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải chuẩn bị và cũng có rất nhiều thứ được ấp ủ, dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất với sự có mặt của tất cả mọi người. Nhưng vì hai đứa làm đám cuới quê, chịu giới hạn khá lớn về mặt di chuyển và cơ sở vật chất quê cũng như thời gian gấp rút gói gọn tất cả trong 2 ngày nên hai đứa không thể chuẩn bị đủ chu đáo cho các bạn ở quá xa. Hai đứa sẽ tìm cơ hội để báo hỷ cùng các bạn/anh chị ở một dịp khác thuận tiện hơn và có nhiều thời gian hơn. Dù thế nào đi nữa, món quà lớn nhất vẫn là được mọi người chia sẻ niềm vui này cùng với 2 đứa ^_^",
-        "thank-you-text-2" : "Thật hạnh phúc khi được cưới người mình yêu, và càng hạnh phúc hơn khi được cưới nhau trong sự yêu thương và chúc phúc của mọi người.",
+        "thank-you-text" : "Tổ chức một lễ cưới đúng là một trải nghiệm khó quên, rất nhiều thứ phải chuẩn bị và cũng có rất nhiều thứ được ấp ủ, dĩ nhiên bọn mình chỉ có thể làm một lần duy nhất nên chỉ muốn làm sao cho chu đáo nhất với sự có mặt của tất cả mọi người. Nhưng vì hai đứa làm đám cuới quê, chịu giới hạn khá lớn về mặt di chuyển và cơ sở vật chất quê cũng như thời gian gấp rút gói gọn tất cả trong 2 ngày nên hai đứa không thể chuẩn bị đủ chu đáo cho các bạn ở quá xa. Hai đứa sẽ tìm cơ hội để báo hỷ cùng mọi người ở một dịp khác thuận tiện hơn và có nhiều thời gian hơn. Dù thế nào đi nữa, món quà ý nghĩa nhất vẫn là được mọi người chia sẻ niềm vui này cùng với 2 đứa ^_^",
+        "thank-you-text-2" : "Thật hạnh phúc khi được cưới người mình yêu, và càng hạnh phúc hơn khi được đến với nhau trong sự yêu thương và chúc phúc của mọi người.",
         "send-message-text" : "Gởi Tin Nhắn",
         "send-private-mesage-text" : "Gởi Tin Nhắn Riêng",
         "tell-though-text" : "Xin bạn cho ý kiến ^_^",
@@ -101,7 +101,7 @@ $(document).ready(function (){
         "direction-self" : "Xe Tự Đi",
         "direction-self-desc" : "Nếu bạn muốn tự di chuyển, có 2 nhà xe có chuyến về Cái Mơn mỗi giờ như sau:",
         "say-cool" : "Nói gì cho ngầu nào",
-        "for-my-love" : "Made this for my only love ^_^"
+        "for-my-love" : "Viết tặng vợ iu ^_^"
     };
 
     var en = {
@@ -136,7 +136,7 @@ $(document).ready(function (){
         "our-story-text" : "Our Story",
         "story-1-title" : "We're best friends",
         "story-1-1" : "It isn't a love from the first sight.",
-        "story-1-2" : "We started as friends in a same class in high school in 2005, when we were 15. We studied, played and laugh together as friends, sometimes we shared the earphone of the ipod borrowed from another friend and enjoyed the music and peaceful moment together in the time break.",
+        "story-1-2" : "We started as friends in a same class in high school in 2005, when we were 15. We studied, played and laughed together as friends, sometimes we shared the earphone of the ipod borrowed from another friend and enjoyed the music and peaceful moment together in the time break.",
         "story-1-3" : "In the second year of high shool, I found myself had a crush on her. I didn't notice that \"weird\" feeling kept growing up inside me until I realized I might cannot be by her side anymore. There're many \"teenagers\" things happened that we couldn't handle and I thought it's just a feeling of youth and wouldn't last for long. I wrote her a letter, saying that I will focus on the university exam in next year instead and take it as a test for ourselves. She's the main reason made me study so hard for the university <img style='width: 30px' src='./images/nerd.png'/>",
         "story-1-4" : "After the exam in 2008, we managed to get into the same university in Ho Chi Minh city. But because I am a pessimistic person, during those 4 years of university, I still kept worrying too much about the future and my family's financial problems. Until I found my first job and could earn the money on my own in 2012, we had our first date <img style=\"width: 30px\" src=\"./images/love-heart.png\"/>",
         "story-2-title" : "We're in love",
@@ -181,7 +181,7 @@ $(document).ready(function (){
         "direction-self" : "Travel by yourself",
         "direction-self-desc" : "If you want to go by your own, there're 2 more bus services which have trips every hour, please refer to the info below:",
         "say-cool" : "Let's say something cool",
-        "for-my-love" : "Viết tặng vợ iu ^_^"
+        "for-my-love" : "Made this for my only love ^_^"
     }
 
     $(document).ready(function (){
