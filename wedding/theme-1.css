@@ -1188,6 +1188,16 @@ label{
         font-size:35px
     }
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+    .ceremony-col ul.meta-list {
+        margin-top: 90px;
+    }
+}
+@media (min-width: 1200px) {
+    .ceremony-col ul.meta-list {
+        margin-top: 40px;
+    }
+}
 @media (max-width: 1020px){
     .hero-section {
         height: 600px;
@@ -1299,6 +1309,9 @@ label{
 
     .message-inner {
         padding-top: 100px;
+    }
+    .ceremony-col ul.meta-list {
+        margin-top: 40px;
     }
 }
 @media (max-width: 375px) {
