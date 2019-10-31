@@ -528,7 +528,7 @@ label{
     border-color: red;
 }
 .story-section{
-    background:#413a38 url("../images/story-bg2.jpg") no-repeat 38% top;
+    background:#413a38 url("../images/story-bg3.jpg") no-repeat 38% top;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
@@ -1244,7 +1244,7 @@ label{
         background-position: 60%;
     }
     .story-section{
-        background:#413a38 url("../images/story-bg2.jpg") no-repeat 10% top;
+        background:#413a38 url("../images/story-bg3.jpg") no-repeat 10% top;
         -webkit-background-size:cover;
         -moz-background-size:cover;
         -o-background-size:cover;
