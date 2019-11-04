@@ -747,8 +747,8 @@ label{
     opacity:.8
 }
 .fb_iframe_widget,.fb_iframe_widget span,.fb_iframe_widget span iframe[style]{
-    min-width:100% !important;
-    width:100% !important;
+    /*min-width:100% !important;
+    width:100% !important;*/
     background:#fff
 }
 .comments-section{
@@ -763,7 +763,7 @@ label{
     font-weight:bold
 }
 .comments-container{
-    max-width:760px;
+    /*max-width:760px;*/
     background:rgba(255,255,255,0.8);
     padding:15px;
     -webkit-border-radius:10px;
@@ -778,6 +778,7 @@ label{
 .fb-comments{
     background:#fff
 }
+
 .modal .modal-dialog{
     width:760px
 }
