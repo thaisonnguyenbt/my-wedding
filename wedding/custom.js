@@ -40,17 +40,17 @@ $(document).ready(function (){
         "seconds-text" : "Giây",
         "ceremony-text" : "Thánh Lễ Hôn Phối",
         "ceremony-text-1" : "Thứ 7 - 04/01/2020",
-        "ceremony-text-2" : "5 Giờ Sáng",
+        "ceremony-text-2" : "8 Giờ Sáng",
         "ceremony-text-3" : "Nhà Thờ Cái Mơn",
-        "ceremony-description-text" : "Thánh lễ hôn phối sẽ được cử hành tại nhà thờ Cái Mơn vào lúc <strong>5 Giờ Sáng</strong>, <strong>04/01/2020</strong> (dương lịch). Sự hiện diện của quý khách cùng tham dự thánh lễ hôn phối là niềm vinh hạnh lớn cho đôi trẻ và gia đình chúng tôi.",
+        "ceremony-description-text" : "Thánh lễ hôn phối sẽ được cử hành tại nhà thờ Cái Mơn vào lúc <strong>8 Giờ Sáng</strong>, <strong>04/01/2020</strong> (dương lịch). Sự hiện diện của quý khách cùng tham dự thánh lễ hôn phối là niềm vinh hạnh lớn cho đôi trẻ và gia đình chúng tôi.",
         "bride-wedding-text" : "Lễ Hỏi",
         "bride-wedding-text-1" : "Thứ 7 - 04/01/2020",
         "bride-wedding-text-2" : "8 Giờ | 11 Giờ",
         "bride-wedding-text-3" : "Nhà Đàng Gái",
-        "bride-wedding-description-text" : "Sau thánh lễ, tộc đàng trai sẽ đến nhà đàng gái trình sính lễ và cử hành nghi thức dạm hỏi truyền thống vào lúc <strong>8 Giờ Sáng</strong> trước trưởng bối hai họ, theo sau bởi tiệc mừng vào lúc <strong>8:30 Sáng</strong> và <strong>11 Giờ Sáng</strong> cùng ngày",
+        "bride-wedding-description-text" : "Sau thánh lễ, tộc đàng trai sẽ đến nhà đàng gái trình sính lễ và cử hành nghi thức dạm hỏi truyền thống vào lúc <strong>10:30 Sáng</strong> trước trưởng bối hai họ, theo sau bởi tiệc mừng vào lúc <strong>11 Giờ Sáng</strong> và <strong>3 Giờ Chiều</strong> cùng ngày",
         "groom-wedding-text" : "Lễ Cưới",
         "groom-wedding-text-1" : "Chúa Nhật - 05/01/2020",
-        "groom-wedding-text-2" : "8 Giờ | 11 giờ",
+        "groom-wedding-text-2" : "10:30 Sáng | 3 Giờ Chiều",
         "groom-wedding-text-3" : "Nhà Đàng Trai",
         "wedding-description-text" : "Vào sáng Chúa Nhật, đoàn rước dâu sẽ đến nhà cô dâu vào lúc <strong>7 Giờ Sáng</strong> và làm lễ xin phép rước dâu. Sau khi về đến nhà đàng trai và làm <strong>lễ ra mắt tổ tiên</strong> vào lúc <strong>8 Giờ Sáng</strong>, tiệc mừng cưới được cử hành ngay sau đó vào lúc <strong>8:30 sáng</strong> và <strong>11h sáng</strong>.",
         "our-story-text" : "Chuyện Hai Đứa",
@@ -90,14 +90,14 @@ $(document).ready(function (){
         "pickup-other-location" : "Điểm đón khác trên đường",
         "pickup-message" : "Lời nhắn thêm",
         "pickup-submit" : "Gởi",
-        "pickup-early" : "Nếu bạn dự lễ cưới ở nhà thờ vào sáng 4/1, xin hãy gởi tin nhắn SMS hoặc dùng nút &quot;Gởi Tin Nhắn&quot; bên dưới. Xe xuất hành vào chiều thứ 6.",
+        "pickup-early" : "Nếu bạn dự lễ cưới ở nhà thờ vào lúc 8 Giờ Sáng 4/1, xin hãy gởi tin nhắn SMS hoặc dùng nút &quot;Gởi Tin Nhắn&quot; ở cuối trang. Xe xuất hành vào 5 Giờ Sáng, 4/1.",
         "directionModalLabel" : "Chi Tiết Di Chuyển",
         "direction-church" : "Địa Điểm Hôn Lễ",
         "direction-church-name" : "Nhà Thờ Cái Mơn",
         "direction-prepare" : "Xe được chuẩn bị",
         "direction-desc-1" : "Vào sáng thứ 7 ngày 4 tháng 1, Tụi em sẽ chuẩn bị 2 xe rước từ Sài Gòn về Cái Mơn ở 2 địa điểm sau:",
-        "direction-intel" : "Từ Cty Intel Product",
-        "direction-uni" : "Từ Đại Học Khoa Học Tự Nhiên Q5",
+        "direction-intel" : "Từ Cty Intel Product Q9 - <span style=\"color: red\">7:00am</span> - (Tuyến đường trên bản đồ có thể sẽ được cập nhật lại sau)",
+        "direction-uni" : "Từ Đại Học Khoa Học Tự Nhiên Q5 - <span style=\"color: red\">7:30am</span> - (Tuyến đường trên bản đồ có thể sẽ được cập nhật lại sau)",
         "direction-self" : "Xe Tự Đi",
         "direction-self-desc" : "Nếu bạn muốn tự di chuyển, có 2 nhà xe có chuyến về Cái Mơn mỗi giờ như sau:",
         "say-cool" : "Xin cho biết ý kiến của bạn",
@@ -120,14 +120,14 @@ $(document).ready(function (){
         "seconds-text" : "Secs",
         "ceremony-text" : "Ceremony",
         "ceremony-text-1" : "Saturday - 04/01/2020",
-        "ceremony-text-2" : "5:00am - 6:00am",
+        "ceremony-text-2" : "8:00am - 9:00am",
         "ceremony-text-3" : "Cái Mơn Church",
-        "ceremony-description-text" : "Our Holy Matrimony will be celebrated at Cái Mơn's church. Come and share our joy at <strong>5am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.",
+        "ceremony-description-text" : "Our Holy Matrimony will be celebrated at Cái Mơn's church. Please come and share the joy with us at <strong>8am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.",
         "bride-wedding-text" : "Betrothal",
         "bride-wedding-text-1" : "Saturday - 04/01/2020",
-        "bride-wedding-text-2" : "8:00am | 11:00am",
+        "bride-wedding-text-2" : "10:30am | 3:00pm",
         "bride-wedding-text-3" : "Bride's House",
-        "bride-wedding-description-text" : "After the Holy Matrimony, deputation of the groom's parents and senior relatives will come to visit bride's family. There will be Vietnamese traditional pre-wedding rituals at <strong>8am</strong>, followed by the banquets at <strong>8:30am</strong> and <strong>11am</strong>.",
+        "bride-wedding-description-text" : "After the Holy Matrimony, deputation of the groom's parents and senior relatives will come to visit bride's family. There will be Vietnamese traditional pre-wedding rituals at <strong>10:30am</strong>, followed by the banquets at <strong>11am</strong> and <strong>3pm</strong>.",
         "groom-wedding-text" : "Wedding",
         "groom-wedding-text-1" : "Sunday - 05/01/2020",
         "groom-wedding-text-2" : "8:00am | 11:00am",
@@ -170,14 +170,14 @@ $(document).ready(function (){
         "pickup-other-location" : "Other preferred location on the way",
         "pickup-message" : "Additional message",
         "pickup-submit" : "Submit",
-        "pickup-early" : "If you want to attend our Holy Matrimony celebration on Jan 4th early morning, please drop us a SMS message or use &quot;Send Us A Message&quot; button below. The cars will be departing on Friday afternoon.",
+        "pickup-early" : "If you want to attend our Church Wedding Ceremony at 8ams 4th Jan, please drop us a SMS message or use &quot;Send Us A Message&quot; button in the page bottom. The bus will be departing at 5am, 4th January.",
         "directionModalLabel" : "How to get to our village",
         "direction-church" : "Church Ceremony",
         "direction-church-name" : "Cái Mơn Church",
         "direction-prepare" : "Our prepared trip",
         "direction-desc-1" : "For the trip on January 4th from Ho Chi Minh city to Cái Mơn (Bến Tre), we will prepare 2 buses to pick you up at 2 locations below:",
-        "direction-intel" : "From Intel Product Q9",
-        "direction-uni" : "From University of Natural Sciences Q5",
+        "direction-intel" : "From Intel Product District 9 - <span style=\"color: red\">7:00am</span> - (Bus route may be updated later)",
+        "direction-uni" : "From University of Natural Sciences District 5 - <span style=\"color: red\">7:30am</span> - (Bus route may be updated later)",
         "direction-self" : "Travel by yourself",
         "direction-self-desc" : "If you want to go by your own, there're 2 more bus services which have trips every hour, please refer to the info below:",
         "say-cool" : "Tell us what you think",
@@ -378,7 +378,9 @@ $(document).ready(function (){
           
             return function() {
                 if (!mapIsAdded) {
-                    $('#bien-viet-xanh').html('<iframe src="https://www.google.com/maps/d/embed?mid=1uxAw8elmL8yDwOHkJSRiWzpAL8sGZ9Pr"></iframe>');
+                    setTimeout(function() {
+                        $('#bien-viet-xanh').html('<iframe src="https://www.google.com/maps/d/embed?mid=1uxAw8elmL8yDwOHkJSRiWzpAL8sGZ9Pr"></iframe>');
+                    }, 500);
                     mapIsAdded = true;
                 }    
             };
@@ -389,11 +391,13 @@ $(document).ready(function (){
           
             return function() {
                 if (!mapIsAdded) {
-                    $('#dai-ngan').html('<iframe src="https://www.google.com/maps/d/embed?mid=1qsv9QAqL1Z0nCyq9Pjko3B825xaYNbMo"></iframe>');
+                    setTimeout(function() {
+                        $('#dai-ngan').html('<iframe src="https://www.google.com/maps/d/embed?mid=1qsv9QAqL1Z0nCyq9Pjko3B825xaYNbMo"></iframe>');
+                    }, 700);
                     mapIsAdded = true;
                 }    
             };
-        })());
+        })());s
 
         $('#thankyou-modal').on('hidden.bs.modal', function() {
             window.location.reload();
@@ -401,7 +405,7 @@ $(document).ready(function (){
     });
 
     jQuery(function ($) {
-        startTimer("2020-01-03T22:00:00.000Z", $("#church-countdown-box"));
+        startTimer("2020-01-04T01:00:00.000Z", $("#church-countdown-box"));
     });
 
     var $container = $('#photos-wrapper');

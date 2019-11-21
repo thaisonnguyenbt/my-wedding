@@ -126,7 +126,7 @@
 					<div class="ceremony-col col-12 col-lg-4">
 						<div class="col-inner">
 							<h4 id="ceremony-text" class="subtitle">Ceremony</h4>
-							<p id="ceremony-description-text" class="intro">Our Holy Matrimony will be celebrated at Cái Mơn's church. Come and share our joy at <strong>5am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.</p>
+							<p id="ceremony-description-text" class="intro">Our Holy Matrimony will be celebrated at Cái Mơn's church. Please come and share the joy with us at <strong>8am, Saturday, 4th January 2020</strong>. Your presence is a great honor to us, Thái Sơn & Đông Tri, and our family in this very special moment.</p>
 							<ul class="meta-list list-unstyled text-left center-block">
 								<li>
 									<span class="icon-calendar love-icon"></span>
@@ -134,7 +134,7 @@
 								</li>
 								<li>
 									<span class="icon-clock love-icon"></span>
-									<span id="ceremony-text-2">5:00am - 6:00am</span>
+									<span id="ceremony-text-2">8:00am - 9:00am</span>
 								</li>
 								<li>
 									<span class="icon-map love-icon"></span>
@@ -146,7 +146,7 @@
 					<div class="ceremony-col col-12 col-lg-4">
 						<div class="col-inner">
 							<h4 id="bride-wedding-text" class="subtitle">Betrothal</h4>
-							<p id="bride-wedding-description-text" class="intro">After the Holy Matrimony, deputation of the groom's parents and senior relatives will come to visit bride's family. There will be Vietnamese traditional pre-wedding rituals at <strong>8am</strong>, followed by the banquets at <strong>8:30am</strong> and <strong>11am</strong>.</p>
+							<p id="bride-wedding-description-text" class="intro">After the Holy Matrimony, deputation of the groom's parents and senior relatives will come to visit bride's family. There will be Vietnamese traditional pre-wedding rituals at <strong>10:30am</strong>, followed by the banquets at <strong>11am</strong> and <strong>3pm</strong>.</p>
 							<ul class="meta-list list-unstyled text-left center-block">
 								<li>
 									<span class="icon-calendar love-icon"></span>
@@ -154,7 +154,7 @@
 								</li>
 								<li>
 									<span class="icon-clock love-icon"></span>
-									<span id="bride-wedding-text-2">8:00am | 11:00am</span>
+									<span id="bride-wedding-text-2">10:30am | 3:00pm</span>
 								</li>
 								<li>
 									<span class="icon-map love-icon"></span>
@@ -429,6 +429,9 @@
 						</h2>
 					</div>
 					<div class="modal-body">
+						<div id="pickup-early" class="additional-info text-center col-12" style="color:darkred">
+							If you want to attend our Church Wedding Ceremony at 8am 4th Jan, please drop us a SMS message or use &quot;Send Us A Message&quot; button in the page bottom. The bus will be departing at 5am, 4th January.
+						</div>
 						<form id="rsvp-form2" class="rsvp-form form" method="POST" action="https://s6i5yga6rl.execute-api.ap-southeast-1.amazonaws.com/prd/rsvp" novalidate="novalidate">     
 							<div id="form-messages" class="text-center"></div>                  
 							<div class="row text-left">   
@@ -449,9 +452,8 @@
 										<label id="pickup-bus" for="cevents">Which bus do you prefer?</label>
 										<select class="form-control" id="dlocation" name="location" aria-required="true" required="">                       
 											<option value="" selected="">Please select</option> 
-											<option value="Intel Product">Intel Product</option>
-											<option value="University of Sciences">University of Sciences</option>
-											<option value="Holy Matrimony">Holy Matrimony Bus - Friday</option>
+											<option value="Intel Product">Intel Product - 7am</option>
+											<option value="University of Sciences">University of Sciences - 7:30am</option>
 										</select>     
 									</div>       
 								</div>
@@ -480,14 +482,9 @@
 										<textarea class="form-control" id="dmessage" name="message" placeholder="Message content"></textarea>
 									</div>
 								</div>
-								
 								<div class="form-group col-12">
 									<button id="pickup-submit" class="btn btn-block btn-submit btn-primary btn-send-pickup">Submit</button>
 								</div>   
-								
-								<div id="pickup-early" class="additional-info text-center col-12" style="color:darkred">
-									If you want to attend our Holy Matrimony celebration on Jan 4th early morning, please drop us a SMS message or use &quot;Send Us A Message&quot; button below. The cars will be departing on Friday afternoon.
-								</div>
 							</div>
 						</form>
 					</div>
@@ -515,11 +512,11 @@
 								</h5>
 								<p id="direction-desc-1">For the trip on January 4th from Ho Chi Minh city to Cái Mơn (Bến Tre), we will prepare 2 buses to pick you up at 2 locations below:</p>
 								<div class="map-main-container col-md-6">
-									<h5><span id="direction-intel">From Intel Product Q9</span> <span style="color: red">7:30am</span></h5>
+									<h5><span id="direction-intel">From Intel Product District 9 - <span style="color: red">7:00am</span> - (Bus route may be updated later)</span> </h5>
 									<div class="map-container embed-responsive" id="church-path-location"></div>
 								</div>
 								<div class="map-main-container col-md-6">
-									<h5><span id="direction-uni">From University of Natural Sciences</span> <span style="color: red">7:45am</span></h5>
+									<h5><span id="direction-uni">From University of Natural Sciences District 5 - <span style="color: red">7:30am</span> - (Bus route may be updated later)</span> </h5>
 									<div class="map-container embed-responsive" id="church-path-location2"></div>
 								</div>
 								<br><br>
@@ -564,6 +561,6 @@
 		</div>
 		<script type="text/javascript" src="./wedding/packery.pkgd.min.js"></script>
 		<script type="text/javascript" src="./wedding/imagesloaded.pkgd.min.js"></script>
-		<script type="text/javascript" src="./wedding/custom.min.1.2.js"></script>
+		<script type="text/javascript" src="./wedding/custom.min.1.3.js"></script>
 	</body>
 </html>
