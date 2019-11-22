@@ -148,7 +148,7 @@ $(document).ready(function (){
         "story-3-1" : "Our love is sharpened by the stone of our challenges and strengthened by the struggles of our growth.",
         "story-3-2" : "We have been together long enough to fully understand each other. We have had enough times saying Goodbye to appreciate each other. And we have been through thick and thin to learn how to love more each day. Our lives have taught us that love does not consist of gazing at each other but looking outward together in the same direction.",
         "story-3-3" : "And here we are, after all, very excited to announce to the whole world that, in the grace of His Goodness, we will be becoming husband and wife on <strong>4th January 2020</strong>. <img style=\"width: 30px\" src=\"./images/happy-2.png\"/>",
-        "story-3-4" : "Please come and join us at Cái Mơn's Church at 5:00am to witness our very special moment when we present the vow of love in the Lord's blessing and witness to begin our new journey as one family. <img style=\"width: 30px\" src=\"./images/happy-4.png\"/>",
+        "story-3-4" : "Please come and join us at Cái Mơn's Church at <strong>8:00am</strong> to witness our very special moment when we present the vow of love in the Lord's blessing and witness to begin our new journey as one family. <img style=\"width: 30px\" src=\"./images/happy-4.png\"/>",
         "gallery-text" : "Gallery",
         "gallery-taken-text" : "Photos taken by <a href=\"https://www.facebook.com/kenhuynhphoto\" target=\"_blank\">Ken Huỳnh</a> in our hometown and in our high school (^_^)",
         "save-the-date-text" : "Share Our Happiness",
