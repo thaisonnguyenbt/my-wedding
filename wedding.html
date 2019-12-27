@@ -429,9 +429,9 @@
 						</h2>
 					</div>
 					<div class="modal-body">
-						<div id="pickup-early" class="additional-info text-center col-12" style="color:darkred">
+						<!--<div id="pickup-early" class="additional-info text-center col-12" style="color:darkred">
 							If you want to attend our Church Wedding Ceremony at 8am 4th Jan, please drop us a SMS message or use &quot;Send Us A Message&quot; button in the page bottom. The bus will be departing at 5am, 4th January.
-						</div>
+						</div>-->
 						<form id="rsvp-form2" class="rsvp-form form" method="POST" action="https://s6i5yga6rl.execute-api.ap-southeast-1.amazonaws.com/prd/rsvp" novalidate="novalidate">     
 							<div id="form-messages" class="text-center"></div>                  
 							<div class="row text-left">   
@@ -449,11 +449,15 @@
 								</div>
 								<div class="events-group form-group col-12 col-md-6">
 									<div class="form-group-inner">
-										<label id="pickup-bus" for="cevents">Which bus do you prefer?</label>
+										<label id="pickup-bus" for="cevents">Which pickup location do you prefer?</label>
 										<select class="form-control" id="dlocation" name="location" aria-required="true" required="">                       
 											<option value="" selected="">Please select</option> 
-											<option value="Intel Product">Intel Product - 7am</option>
-											<option value="University of Sciences">University of Sciences - 7:30am</option>
+											<option value="Intel Product">Intel Product - 7:20am</option>
+											<option value="Nga Tu Thu Duc">Ngã Tư Thủ Đức - 7:30am</option>
+											<option value="Mercides Benz Hang xanh">Mercides Benz Hàng Xanh - 7:45am</option>
+											<option value="Trung Nguyen Legend">Trung Nguyên Legend - 8:05am</option>
+											<option value="Nha Hat Hoa Binh">Nhà hát Hòa Bình - 8:10am</option>
+											<option value="Mercides Benz Hang xanh">Khoa Học Tự Nhiên - 8:20am</option>
 										</select>     
 									</div>       
 								</div>
@@ -511,13 +515,18 @@
 									<span id="direction-prepare">Our prepared trip</span>
 								</h5>
 								<p id="direction-desc-1">For the trip on January 4th from Ho Chi Minh city to Cái Mơn (Bến Tre), we will prepare 2 buses to pick you up at 2 locations below:</p>
-								<div class="map-main-container col-md-6">
-									<h5><span id="direction-intel">From Intel Product District 9 - <span style="color: red">7:00am</span> - (Bus route may be updated later)</span> </h5>
+								<div class="map-main-container" style="width: 100%;">
+									<ol style="font-size: 20px;">
+										<li><h5 style="text-align: left;">Intel Product District 9 - <span style="color: red">7:20am</span></h5></li>
+										<li><h5 style="text-align: left;">Ngã Tư Thủ Đức (bus stop) - <span style="color: red">7:30am</span> </h5></li>
+										<li><h5 style="text-align: left;">Mercides Benz Hàng Xanh - 333 Điện biên phủ, p15, Bình thạnh - <span style="color: red">7:45am</span> </h5></li>
+										<li><h5 style="text-align: left;">Trung Nguyên Legend - 274, Võ Thị Sáu, p7. Q.3 - <span style="color: red">8:05am</span> </h5></li>
+										<li><h5 style="text-align: left;">Nhà hát Hòa Bình - <span style="color: red">8:10am</span></h5></li>
+										<li><h5 style="text-align: left;">Khoa Học Tự Nhiên - <span style="color: red">8:20am</span> </h5style="text-align: left;"></li>
+										<li><h5 style="text-align: left;">Đại lộ Võ Văn Kiệt</span> </h5></li>
+									</ol>
+
 									<div class="map-container embed-responsive" id="church-path-location"></div>
-								</div>
-								<div class="map-main-container col-md-6">
-									<h5><span id="direction-uni">From University of Natural Sciences District 5 - <span style="color: red">7:30am</span> - (Bus route may be updated later)</span> </h5>
-									<div class="map-container embed-responsive" id="church-path-location2"></div>
 								</div>
 								<br><br>
 								<h5 class="section-title">
@@ -561,6 +570,6 @@
 		</div>
 		<script type="text/javascript" src="./wedding/packery.pkgd.min.js"></script>
 		<script type="text/javascript" src="./wedding/imagesloaded.pkgd.min.js"></script>
-		<script type="text/javascript" src="./wedding/custom.min.1.4.js"></script>
+		<script type="text/javascript" src="./wedding/custom.min.1.5.js"></script>
 	</body>
 </html>
