@@ -1673,3 +1673,23 @@ label{
         background-position: 45%;
     }
 }
+
+.youtube-video {
+    width: 1120px;
+    height: 630px;
+}
+
+@media (max-width: 1178px) {
+    .youtube-video {
+        width: 560px;
+        height: 315px;
+    }
+}
+
+@media (max-width: 600px) {
+    .youtube-video {
+        width: 373px;
+        height: 210px;
+    }
+}
+
